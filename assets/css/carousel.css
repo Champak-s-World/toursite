@@ -1,0 +1,72 @@
+/* Gallery Carousel */
+.pp-carousel{
+  margin-top:12px;
+  border:1px solid var(--border);
+  border-radius: var(--r2);
+  background: rgba(255,255,255,.82);
+  overflow:hidden;
+  position:relative;
+}
+.pp-carousel-stage{
+  position:relative;
+  height:420px;
+  outline:none;
+  background:
+    radial-gradient(700px 420px at 20% 10%, rgba(245,158,11,.10), transparent 60%),
+    radial-gradient(700px 420px at 80% 0%, rgba(217,119,6,.12), transparent 65%),
+    #fff;
+}
+.pp-slide{
+  position:absolute; inset:0;
+  display:grid; place-items:center;
+  opacity:0; transform: translateX(18px) scale(.98);
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events:none;
+  padding:14px;
+}
+.pp-slide.is-active{opacity:1; transform: translateX(0) scale(1); pointer-events:auto;}
+.pp-slide figure{width:100%; height:100%; margin:0;}
+.pp-slide img{
+  width:100%; height:100%;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:0 18px 40px rgba(31,41,55,.14);
+  background:#fff;
+}
+.pp-carousel-btn{
+  position:absolute; top:50%; transform:translateY(-50%);
+  z-index:5;
+  width:44px; height:44px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.88);
+  box-shadow:0 14px 30px rgba(31,41,55,.14);
+  cursor:pointer;
+  font-size:24px;
+  color:var(--ink);
+  display:grid;
+  place-items:center;
+  user-select:none;
+}
+.pp-carousel-btn.prev{left:10px}
+.pp-carousel-btn.next{right:10px}
+.pp-carousel-meta{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:12px; padding:12px 14px;
+  border-top:1px solid var(--border);
+  background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(255,241,214,.65));
+}
+.pp-carousel-title{font-weight:900}
+.pp-carousel-desc{margin-top:4px; font-size:13px}
+.pp-carousel-right{display:flex; flex-direction:column; align-items:flex-end; gap:8px;}
+.pp-carousel-count{font-weight:900; color:var(--muted); font-size:12px;}
+.pp-dots{display:flex; gap:6px; flex-wrap:wrap; max-width:320px; justify-content:flex-end;}
+.pp-dot{
+  width:10px; height:10px; border-radius:999px;
+  border:1px solid rgba(217,119,6,.35);
+  background: rgba(255,255,255,.9);
+  cursor:pointer;
+}
+.pp-dot.is-active{background: rgba(217,119,6,.75);}
+@media (max-width:720px){.pp-carousel-stage{height:320px}.pp-dots{max-width:220px}}

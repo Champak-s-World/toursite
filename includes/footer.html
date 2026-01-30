@@ -1,5 +1,7 @@
 <footer class="pp-footer">
   <div class="pp-container pp-footer-row">
-    <span data-i18n="footerLine">Tours • Yagya • Katha • Arrangements</span>
+    <div class="pp-muted">© <span id="year"></span> <span data-i18n="siteName">Spiritual Services</span></div>
+    <div class="pp-muted" data-i18n="footerLine">Tours • Yagya • Katha • Arrangements</div>
   </div>
 </footer>
+<script>(function(){var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();})();</script>

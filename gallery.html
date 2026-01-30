@@ -1,11 +1,63 @@
-<!doctype html><html><head>
-<link rel="stylesheet" href="assets/css/theme-saffron.css">
-</head><body>
-<div data-include="includes/header.html"></div>
-<h1 data-i18n="navGallery">Gallery</h1>
-<p>Gallery carousel placeholder</p>
-<div data-include="includes/footer.html"></div>
-<script src="assets/js/include-loader.js"></script>
-<script src="assets/js/lang.js"></script>
-<script src="assets/js/i18n.js"></script>
-</body></html>
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery | Spiritual Services</title>
+  <meta name="description" content="Browse photos from tours, rituals and kathas." />
+  <meta name="theme-color" content="#d97706" />
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <link rel="stylesheet" href="assets/css/carousel.css" />
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <section class="pp-hero">
+    <div class="pp-container">
+      <div class="pp-hero-card">
+        <h1 data-i18n="galleryTitle">Gallery</h1>
+        <p class="pp-muted" data-i18n="gallerySubtitle">Photos & moments from tours, rituals, and kathas.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="pp-container pp-main">
+    <section class="pp-panel">
+      <div class="pp-panel-row">
+        <div>
+          <h2 class="pp-h2" data-i18n="galleryBrowseTitle">Browse by Category</h2>
+          <p class="pp-muted" data-i18n="galleryBrowseHint">Use Previous/Next or swipe on mobile.</p>
+        </div>
+        <div class="pp-filters">
+          <label class="pp-label" for="categorySelect" data-i18n="galleryCategoryLabel">Category</label>
+          <select id="categorySelect" class="pp-select" aria-label="Category"></select>
+        </div>
+      </div>
+
+      <div class="pp-carousel" id="ppCarousel" aria-label="Gallery Carousel">
+        <button class="pp-carousel-btn prev" id="btnPrev" type="button" aria-label="Previous image">‹</button>
+        <div class="pp-carousel-stage" id="carouselStage" tabindex="0" aria-label="Carousel stage"></div>
+        <button class="pp-carousel-btn next" id="btnNext" type="button" aria-label="Next image">›</button>
+
+        <div class="pp-carousel-meta">
+          <div class="pp-carousel-caption">
+            <div class="pp-carousel-title" id="captionTitle">—</div>
+            <div class="pp-carousel-desc pp-muted" id="captionDesc">—</div>
+          </div>
+          <div class="pp-carousel-right">
+            <div class="pp-carousel-count" id="counter">0 / 0</div>
+            <div class="pp-dots" id="dots" aria-label="Slide indicators"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/include-loader.js"></script>
+  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/gallery-carousel.js"></script>
+</body>
+</html>

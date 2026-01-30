@@ -1,53 +1,33 @@
-/* =========================================================
-   Spiritual Site — Theme Saffron (Polished UI v2A)
-   Works with the existing minimal markup (v1) + future pages
-   ========================================================= */
-
+/* Theme Saffron — v2C */
 :root{
-  --bg:#fff7e6;
-  --bg2:#fff1d6;
-  --card:rgba(255,255,255,.92);
-  --ink:#1f2937;
-  --muted:#6b7280;
-  --brand:#d97706;
-  --brand2:#f59e0b;
-  --border:#eadcc5;
-  --shadow:0 18px 40px rgba(31,41,55,.14);
-  --r:18px;
-  --r2:24px;
+  --bg:#fff7e6; --bg2:#fff1d6; --card:rgba(255,255,255,.92);
+  --ink:#1f2937; --muted:#6b7280; --brand:#d97706; --brand2:#f59e0b;
+  --border:#eadcc5; --shadow:0 18px 40px rgba(31,41,55,.14);
+  --r:18px; --r2:24px;
 }
-
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0;
+  margin:0; color:var(--ink);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--ink);
   background:
     radial-gradient(1200px 600px at 10% 0%, #fff3d7 0%, transparent 55%),
     radial-gradient(1200px 600px at 90% 0%, #ffe6bf 0%, transparent 60%),
     linear-gradient(180deg,var(--bg) 0%, #fffaf2 55%, #ffffff 100%);
 }
-
 a{color:inherit; text-decoration:none}
 img{max-width:100%; display:block}
-
-/* Container */
+.pp-muted{color:var(--muted)}
 .pp-container{max-width:1100px; margin:0 auto; padding:0 16px}
+.pp-main{padding:14px 0 28px}
 
-/* -------------------------------------------
-   Header / Nav
-------------------------------------------- */
 .pp-header{
   position:sticky; top:0; z-index:9999;
   backdrop-filter: blur(10px);
   background: rgba(255,247,230,.85);
   border-bottom:1px solid var(--border);
 }
-.pp-header-row{
-  display:flex; align-items:center; gap:14px;
-  padding:12px 0;
-}
+.pp-header-row{display:flex; align-items:center; gap:14px; padding:12px 0;}
 .pp-brand{display:flex; align-items:center; gap:10px}
 .pp-brand-mark{
   width:38px; height:38px; display:grid; place-items:center;
@@ -57,72 +37,116 @@ img{max-width:100%; display:block}
 }
 .pp-brand-name{font-weight:800; letter-spacing:.2px}
 
-.pp-nav{
-  display:flex; gap:10px; flex-wrap:wrap;
-  margin-left:auto;
-}
+.pp-nav{display:flex; gap:10px; flex-wrap:wrap; margin-left:auto;}
 .pp-nav a{
-  padding:8px 10px;
-  border-radius:12px;
-  border:1px solid transparent;
+  padding:8px 10px; border-radius:12px; border:1px solid transparent;
   color:var(--muted);
 }
 .pp-nav a:hover{
-  color:var(--ink);
-  border-color: var(--border);
+  color:var(--ink); border-color: var(--border);
   background: rgba(255,255,255,.65);
 }
-
-/* Language toggle */
-.pp-lang{
-  cursor:pointer;
-  border:1px solid var(--border);
-  background: linear-gradient(180deg,#fff,#fff1d6);
-  border-radius:999px;
-  padding:8px 12px;
-  box-shadow:0 10px 22px rgba(31,41,55,.10);
-  font-weight:800;
+.pp-nav a.is-active{
   color:var(--ink);
+  border-color: rgba(217,119,6,.35);
+  background: rgba(217,119,6,.08);
 }
+.pp-actions{display:flex; align-items:center; gap:10px}
+.pp-lang{
+  cursor:pointer; border:1px solid var(--border);
+  background: linear-gradient(180deg,#fff,#fff1d6);
+  border-radius:999px; padding:8px 12px;
+  box-shadow:0 10px 22px rgba(31,41,55,.10);
+  display:flex; align-items:center; gap:10px;
+}
+.pp-lang-pill{font-weight:800; font-size:12px; color:var(--ink)}
+.pp-lang-sep{color:var(--muted); font-weight:700}
 
-/* -------------------------------------------
-   Minimal pages (v1) polish:
-   - makes plain h1 look like a hero card
-------------------------------------------- */
-h1{
-  max-width:1100px;
-  margin:22px auto 12px;
-  padding:18px 18px;
+.pp-hero{padding:20px 0 8px}
+.pp-hero-card{
   border:1px solid var(--border);
-  border-radius: var(--r2);
   background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(255,241,214,.75));
+  border-radius: var(--r2);
   box-shadow: var(--shadow);
-  font-size: clamp(26px, 4vw, 34px);
-  line-height:1.15;
+  padding:18px 18px;
 }
-p{
-  max-width:1100px;
-  margin:0 auto 18px;
-  padding:0 18px;
-  color:var(--muted);
+.pp-hero-card h1{margin:0 0 8px; font-size:clamp(26px, 4vw, 34px); line-height:1.15}
+.pp-hero-card p{margin:0}
+
+.pp-badges{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+.pp-badge{
+  padding:6px 10px; border:1px solid rgba(217,119,6,.30);
+  background: rgba(217,119,6,.08); border-radius:999px;
+  font-weight:800; font-size:12px; color:var(--ink);
 }
 
-/* Footer */
-.pp-footer{
-  margin-top:22px;
-  border-top:1px solid var(--border);
-  background: rgba(255,247,230,.75);
+.pp-panel{
+  border:1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  padding:16px;
 }
-.pp-footer-row{
-  display:flex; justify-content:center; align-items:center;
-  gap:12px; flex-wrap:wrap;
-  padding:14px 0;
-  color:var(--muted);
+.pp-panel-row{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:14px; flex-wrap:wrap; margin-bottom:12px;
+}
+.pp-h2{margin:0 0 6px; font-size:20px}
+.pp-h3{margin:0 0 6px; font-size:18px}
+.pp-label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+.pp-select{
+  min-width:240px; border-radius:14px; border:1px solid var(--border);
+  padding:10px 12px; background:#fff;
 }
 
-/* Responsive */
-@media (max-width: 720px){
-  .pp-nav{display:none}
-  h1{margin:16px 12px 10px}
-  p{padding:0 12px}
+.pp-grid{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px;}
+.pp-card{
+  border:1px solid var(--border); border-radius:18px;
+  background: rgba(255,255,255,.86); overflow:hidden;
+  box-shadow: 0 14px 34px rgba(31,41,55,.12);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
+.pp-card:hover{transform: translateY(-2px); box-shadow: 0 18px 44px rgba(31,41,55,.16);}
+.pp-card-top{
+  padding:12px; display:flex; gap:10px; align-items:center;
+  border-bottom:1px solid rgba(234,220,197,.7);
+  background: linear-gradient(145deg, rgba(255,241,214,.7), rgba(255,255,255,.9));
+}
+.pp-icon{
+  width:36px; height:36px; display:grid; place-items:center;
+  border-radius:12px; border:1px solid rgba(217,119,6,.30);
+  background: rgba(217,119,6,.08);
+}
+.pp-card-title{font-weight:900}
+.pp-card-body{padding:12px}
+.pp-card-desc{margin:0 0 10px; color:var(--muted); font-size:13px}
+.pp-card-actions{display:flex; gap:10px; flex-wrap:wrap}
+
+.pp-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px; border-radius:14px;
+  border:1px solid rgba(217,119,6,.35);
+  background: linear-gradient(180deg, rgba(217,119,6,.95), rgba(245,158,11,.95));
+  color:#fff; font-weight:800;
+  box-shadow:0 14px 28px rgba(217,119,6,.18);
+}
+.pp-btn:hover{filter:brightness(1.02)}
+.pp-btn-outline{background: rgba(255,255,255,.85); color:var(--ink); box-shadow:none}
+
+.pp-contact-widget{margin-top:16px}
+.pp-contact-card{
+  border:1px solid var(--border);
+  background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(255,241,214,.75));
+  border-radius: var(--r2);
+  box-shadow: var(--shadow);
+  padding:16px;
+  display:flex; gap:14px; align-items:center; justify-content:space-between;
+  flex-wrap:wrap;
+}
+.pp-cta-row{display:flex; gap:10px; flex-wrap:wrap}
+
+.pp-footer{border-top:1px solid var(--border); background: rgba(255,247,230,.75);}
+.pp-footer-row{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:14px 0;}
+
+@media (max-width:980px){.pp-grid{grid-template-columns:repeat(2, minmax(0,1fr))}}
+@media (max-width:720px){.pp-nav{display:none}.pp-grid{grid-template-columns:1fr}}
