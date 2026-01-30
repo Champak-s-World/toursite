@@ -16,7 +16,8 @@
         "Mauni Amavasya",
         "Ganga Snan",
         "Varanasi Mauni Amavasya"
-      ]
+      ],
+      "category": "festival"
     },
     {
       "date": "2026-03-25",
@@ -32,7 +33,8 @@
         "Ram Navami",
         "Ayodhya Ram Navami",
         "Shri Ram Katha"
-      ]
+      ],
+      "category": "festival"
     },
     {
       "date": "2026-11-01",
@@ -48,7 +50,8 @@
         "Diwali",
         "Diwali puja vidhi",
         "Lakshmi puja"
-      ]
+      ],
+      "category": "festival"
     },
     {
       "date": "2026-02-14",
@@ -64,7 +67,8 @@
         "Mahashivratri",
         "Rudrabhishek",
         "Kashi Vishwanath"
-      ]
+      ],
+      "category": "festival"
     },
     {
       "date": "2026-06-15",
@@ -80,7 +84,38 @@
         "Guru Purnima",
         "Vyasa Purnima",
         "Satguru"
-      ]
+      ],
+      "category": "festival"
     }
-  ]
+  ],
+  "categories": {
+    "all": {
+      "en": "All",
+      "hi": "सभी"
+    },
+    "festival": {
+      "en": "Festival",
+      "hi": "पर्व"
+    },
+    "snan": {
+      "en": "Snan",
+      "hi": "स्नान"
+    },
+    "ram": {
+      "en": "Shri Ram",
+      "hi": "श्री राम"
+    },
+    "shiv": {
+      "en": "Shiv",
+      "hi": "शिव"
+    },
+    "guru": {
+      "en": "Guru",
+      "hi": "गुरु"
+    },
+    "general": {
+      "en": "General",
+      "hi": "सामान्य"
+    }
+  }
 }

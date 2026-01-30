@@ -20,6 +20,9 @@
     badgeKatha: { en: "Kathas", hi: "कथाएँ" },
 
     homeServicesTitle: { en: "Our Services", hi: "हमारी सेवाएँ" },
+    homeUpcomingTitle: { en: "Next Important Occasions", hi: "आगामी महत्वपूर्ण अवसर" },
+    homeUpcomingHint: { en: "Auto-generated from the calendar.", hi: " Demonstration: कैलेंडर से स्वतः तैयार।" },
+    homeViewCalendar: { en: "View Full Calendar", hi: "पूरा कैलेंडर देखें" },
     homeServicesDesc: { en: "Choose from our core spiritual offerings.", hi: "हमारी प्रमुख आध्यात्मिक सेवाओं में से चुनें।" },
 
     cardToursTitle: { en: "Spiritual Tours", hi: "धार्मिक यात्राएँ" },
@@ -46,6 +49,11 @@
     calendarPrev: { en: "Prev", hi: "पिछला" },
     calendarNext: { en: "Next", hi: "अगला" },
     calendarMonthLabel: { en: "Month", hi: "महीना" },
+    calendarFilterLabel: { en: "Category", hi: "श्रेणी" },
+    calendarViewMonth: { en: "Month View", hi: "मासिक दृश्य" },
+    calendarViewYear: { en: "Year View", hi: "वार्षिक दृश्य" },
+    calendarUpcoming: { en: "Upcoming", hi: "आगामी" },
+    calendarNoUpcoming: { en: "No upcoming occasions found.", hi: "कोई आगामी अवसर नहीं मिला।" },
     calendarOccasions: { en: "Occasions", hi: "अवसर" },
     calendarAutoSearch: { en: "Auto Search Results", hi: "ऑटो सर्च परिणाम" },
     calendarSearchHint: { en: "Click a result to open in a new tab.", hi: "परिणाम पर क्लिक करें — नई टैब में खुलेगा।" },
