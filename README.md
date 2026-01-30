@@ -16,3 +16,8 @@ Run locally with VS Code Live Server (recommended).
   - `data-pp="call"`
   - `data-pp="email" data-subject="..."`
   - `data-pp-text="phone"` / `data-pp-text="email"`
+
+
+## Find-on-Page (Central, Fixed)
+- Loaded via `assets/js/external-scripts.js` (dynamic injection)
+- Reason: scripts inside fetched includes (innerHTML) do not execute.

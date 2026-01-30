@@ -27,7 +27,7 @@ img{max-width:100%; display:block}
   background: rgba(255,247,230,.85);
   border-bottom:1px solid var(--border);
 }
-.pp-header-row{display:flex; align-items:center; gap:14px; padding:12px 0;}
+.pp-header-row{display:flex; align-items:center; gap:14px; padding:12px 0; position:relative;}
 .pp-brand{display:flex; align-items:center; gap:10px}
 .pp-brand-mark{
   width:38px; height:38px; display:grid; place-items:center;
@@ -51,7 +51,7 @@ img{max-width:100%; display:block}
   border-color: rgba(217,119,6,.35);
   background: rgba(217,119,6,.08);
 }
-.pp-actions{display:flex; align-items:center; gap:10px}
+.pp-actions{display:flex; align-items:center; gap:10px; margin-left:auto}
 .pp-lang{
   cursor:pointer; border:1px solid var(--border);
   background: linear-gradient(180deg,#fff,#fff1d6);
@@ -150,3 +150,69 @@ img{max-width:100%; display:block}
 
 @media (max-width:980px){.pp-grid{grid-template-columns:repeat(2, minmax(0,1fr))}}
 @media (max-width:720px){.pp-nav{display:none}.pp-grid{grid-template-columns:1fr}}
+
+
+@media (max-width: 720px){
+  .pp-menu-btn{display:block}
+  .pp-nav{
+    display:none;
+    position:absolute;
+    top:64px;
+    left:12px;
+    right:12px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    padding:12px;
+    flex-direction:column;
+    gap:8px;
+  }
+  .pp-nav.open{display:flex}
+}
+
+
+/* -------------------------------------------
+   Mobile Hamburger Menu (fixed)
+------------------------------------------- */
+.pp-menu-btn{
+  display:none;
+  width:44px; height:44px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background: linear-gradient(180deg,#fff,#fff1d6);
+  box-shadow:0 10px 22px rgba(31,41,55,.10);
+  cursor:pointer;
+  font-size:20px;
+  color:var(--ink);
+}
+
+@media (max-width: 720px){
+  .pp-menu-btn{display:grid; place-items:center}
+  /* Keep nav hidden until opened */
+  .pp-nav{display:none}
+  .pp-nav.open{
+    display:flex;
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    margin:0 12px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    padding:12px;
+    flex-direction:column;
+    gap:8px;
+  }
+  .pp-nav.open a{
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid transparent;
+  }
+  .pp-nav.open a:hover{
+    border-color: var(--border);
+    background: rgba(255,241,214,.55);
+  }
+}

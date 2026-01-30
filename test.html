@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Python Final Test – Programmer’s Picnic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <style>
+      :root {
+        --bg: #fff7e6;
+        --card: #ffffff;
+        --ink: #1f2937;
+        --brand: #d97706;
+        --border: #eadcc5;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui;
+        background: var(--bg);
+        color: var(--ink);
+      }
+      header {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        color: #fff;
+        padding: 16px;
+      }
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .hidden {
+        display: none;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      textarea {
+        width: 100%;
+        height: 160px;
+        font-family: monospace;
+        font-size: 14px;
+      }
+      .badge {
+        display: inline-block;
+        background: #fde68a;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        color: #92400e;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>🐍 Python Final Test – 7 PM Batch</h1>
+      <div id="modeBadge" class="badge"></div>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <h2>Section A – Theory</h2>
+        <p>Answer in notebook or Google Form.</p>
+      </div>
+
+      <div class="card">
+        <h2>Section B – Coding</h2>
+
+        <p><b>B1. Calculator</b></p>
+        <textarea placeholder="Write your code here..."></textarea>
+
+        <div id="answerB1" class="hidden">
+          <pre>
+# Sample Solution
+a=float(input())
+b=float(input())
+op=input()
+if op=="+":
+    print(a+b)
+</pre
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Embedded Python Editor</h2>
+        <iframe
+          src="https://www.learnwithchampak.live/2026/01/programmers-picnic-python-editor.html"
+          style="
+            width: 100%;
+            height: 420px;
+            border: 1px solid #eadcc5;
+            border-radius: 12px;
+          "
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(location.search);
+      const tmode = params.get("tmode") === "1";
+      document.getElementById("modeBadge").textContent = tmode
+        ? "Teacher Mode"
+        : "Student Mode";
+
+      if (tmode) {
+        document
+          .querySelectorAll(".hidden")
+          .forEach((el) => el.classList.remove("hidden"));
+      }
+    </script>
+  </body>
+</html>
