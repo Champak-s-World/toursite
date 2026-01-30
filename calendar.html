@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calendar | Spiritual Services</title>
+  <meta name="description" content="Important occasions calendar with auto search results." />
+  <meta name="theme-color" content="#d97706" />
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <link rel="stylesheet" href="assets/css/calendar.css" />
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <section class="pp-hero">
+    <div class="pp-container">
+      <div class="pp-hero-card">
+        <h1 data-i18n="calendarTitle">Important Occasions Calendar</h1>
+        <p class="pp-muted" data-i18n="calendarSubtitle">Tap a date to see occasions and auto search results.</p>
+        <div class="pp-badges">
+          <span class="pp-badge" data-i18n="calendarAddToJson">Add/Edit occasions in data/calendar.json</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="pp-container pp-main">
+    <section class="pp-panel">
+      <div class="pp-cal-head">
+        <div class="pp-cal-controls">
+          <button class="pp-cal-btn" id="btnCalPrev" type="button" aria-label="Prev">‹</button>
+          <div class="pp-cal-month" id="monthLabel">—</div>
+          <button class="pp-cal-btn" id="btnCalNext" type="button" aria-label="Next">›</button>
+          <button class="pp-btn pp-btn-outline" id="btnCalToday" type="button" data-i18n="calendarToday">Today</button>
+        </div>
+        <div class="pp-muted" data-i18n="calendarSearchHint">Click a result to open in a new tab.</div>
+      </div>
+
+      <div class="pp-cal">
+        <div class="pp-cal-grid" aria-label="Calendar">
+          <div class="pp-cal-week" aria-hidden="true">
+            <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+          </div>
+          <div class="pp-cal-days" id="calDays"></div>
+        </div>
+
+        <aside class="pp-side" aria-label="Details">
+          <h3 class="pp-h3" id="sideDateTitle" data-i18n="calendarPickDate">Pick a date to view details.</h3>
+          <div class="pp-muted" style="margin:6px 0 10px" data-i18n="calendarOccasions">Occasions</div>
+          <div id="sideEvents"></div>
+
+          <div class="pp-muted" style="margin:10px 0 10px" data-i18n="calendarAutoSearch">Auto Search Results</div>
+          <div class="pp-links" id="sideLinks"></div>
+          <div id="sideWiki"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/include-loader.js"></script>
+  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="data/site.config.js"></script>
+  <script src="assets/js/contact-utils.js"></script>
+  <script src="assets/js/external-scripts.js"></script>
+  <script src="assets/js/menu-toggle.js"></script>
+  <script src="assets/js/calendar.js"></script>
+</body>
+</html>

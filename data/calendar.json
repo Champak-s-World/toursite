@@ -1,0 +1,86 @@
+{
+  "timezone": "Asia/Kolkata",
+  "defaultCity": "Varanasi",
+  "events": [
+    {
+      "date": "2026-01-30",
+      "title": {
+        "en": "Mauni Amavasya (Example)",
+        "hi": "मौनी अमावस्या (उदाहरण)"
+      },
+      "tags": [
+        "festival",
+        "snan"
+      ],
+      "queries": [
+        "Mauni Amavasya",
+        "Ganga Snan",
+        "Varanasi Mauni Amavasya"
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "title": {
+        "en": "Ram Navami (Example)",
+        "hi": "राम नवमी (उदाहरण)"
+      },
+      "tags": [
+        "festival",
+        "ram"
+      ],
+      "queries": [
+        "Ram Navami",
+        "Ayodhya Ram Navami",
+        "Shri Ram Katha"
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "title": {
+        "en": "Diwali (Example)",
+        "hi": "दीवाली (उदाहरण)"
+      },
+      "tags": [
+        "festival",
+        "diwali"
+      ],
+      "queries": [
+        "Diwali",
+        "Diwali puja vidhi",
+        "Lakshmi puja"
+      ]
+    },
+    {
+      "date": "2026-02-14",
+      "title": {
+        "en": "Shivratri (Example)",
+        "hi": "शिवरात्रि (उदाहरण)"
+      },
+      "tags": [
+        "festival",
+        "shiv"
+      ],
+      "queries": [
+        "Mahashivratri",
+        "Rudrabhishek",
+        "Kashi Vishwanath"
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "title": {
+        "en": "Guru Purnima (Example)",
+        "hi": "गुरु पूर्णिमा (उदाहरण)"
+      },
+      "tags": [
+        "festival",
+        "guru"
+      ],
+      "queries": [
+        "Guru Purnima",
+        "Vyasa Purnima",
+        "Satguru"
+      ]
+    }
+  ]
+}

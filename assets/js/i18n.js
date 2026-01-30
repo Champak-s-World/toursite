@@ -9,6 +9,7 @@
     navKatha: { en: "Katha", hi: "कथा" },
     navAcharyas: { en: "Acharyas", hi: "आचार्य" },
     navGallery: { en: "Gallery", hi: "गैलरी" },
+    navCalendar: { en: "Calendar", hi: "कैलेंडर" },
     navContact: { en: "Contact", hi: "संपर्क" },
 
     homeTitle: { en: "Spiritual Services & Pilgrimage Experiences", hi: "आध्यात्मिक सेवाएँ एवं तीर्थ यात्रा अनुभव" },
@@ -38,6 +39,19 @@
     ctaCall: { en: "Call", hi: "कॉल करें" },
 
     galleryTitle: { en: "Gallery", hi: "गैलरी" },
+
+    calendarTitle: { en: "Important Occasions Calendar", hi: "महत्वपूर्ण अवसर कैलेंडर" },
+    calendarSubtitle: { en: "Tap a date to see occasions and auto search results.", hi: "किसी तारीख पर टैप करें — अवसर और ऑटो सर्च परिणाम देखें।" },
+    calendarToday: { en: "Today", hi: "आज" },
+    calendarPrev: { en: "Prev", hi: "पिछला" },
+    calendarNext: { en: "Next", hi: "अगला" },
+    calendarMonthLabel: { en: "Month", hi: "महीना" },
+    calendarOccasions: { en: "Occasions", hi: "अवसर" },
+    calendarAutoSearch: { en: "Auto Search Results", hi: "ऑटो सर्च परिणाम" },
+    calendarSearchHint: { en: "Click a result to open in a new tab.", hi: "परिणाम पर क्लिक करें — नई टैब में खुलेगा।" },
+    calendarNoEvents: { en: "No occasions marked for this date.", hi: "इस तारीख के लिए कोई अवसर चिन्हित नहीं है।" },
+    calendarPickDate: { en: "Pick a date to view details.", hi: "विवरण देखने के लिए तारीख चुनें।" },
+    calendarAddToJson: { en: "Add/Edit occasions in data/calendar.json", hi: "अवसर जोड़ें/संपादित करें: data/calendar.json" },
     gallerySubtitle: { en: "Photos & moments from tours, rituals, and kathas.", hi: "टूर, यज्ञ/पूजा और कथाओं के फोटो व क्षण।" },
     galleryBrowseTitle: { en: "Browse by Category", hi: "श्रेणी के अनुसार देखें" },
     galleryBrowseHint: { en: "Use Previous/Next or swipe on mobile.", hi: "Previous/Next दबाएँ या मोबाइल पर swipe करें।" },

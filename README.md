@@ -21,3 +21,10 @@ Run locally with VS Code Live Server (recommended).
 ## Find-on-Page (Central, Fixed)
 - Loaded via `assets/js/external-scripts.js` (dynamic injection)
 - Reason: scripts inside fetched includes (innerHTML) do not execute.
+
+
+## Calendar (NEW)
+- Page: `calendar.html`
+- Data: `data/calendar.json`
+- Component: `assets/js/calendar.js` + `assets/css/calendar.css`
+- Auto search results: generates Google/YouTube/Wikipedia links and tries Wikipedia summary.

@@ -1,0 +1,122 @@
+/* Calendar component */
+.pp-cal{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:12px;
+}
+.pp-cal-head{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:10px; flex-wrap:wrap;
+  margin-bottom:10px;
+}
+.pp-cal-controls{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.pp-cal-btn{
+  width:44px; height:44px; border-radius:14px;
+  border:1px solid var(--border);
+  background: linear-gradient(180deg,#fff,#fff1d6);
+  box-shadow:0 10px 22px rgba(31,41,55,.10);
+  cursor:pointer;
+  display:grid; place-items:center;
+  font-size:18px;
+}
+.pp-cal-month{
+  padding:10px 12px; border-radius:14px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.85);
+  font-weight:900;
+}
+.pp-cal-grid{
+  border:1px solid var(--border);
+  border-radius: var(--r2);
+  background: rgba(255,255,255,.82);
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+.pp-cal-week{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: linear-gradient(145deg, rgba(255,241,214,.7), rgba(255,255,255,.9));
+  border-bottom:1px solid rgba(234,220,197,.7);
+}
+.pp-cal-week div{
+  padding:10px 8px;
+  text-align:center;
+  font-weight:900;
+  color:var(--muted);
+  font-size:12px;
+}
+.pp-cal-days{
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.pp-day{
+  min-height:62px;
+  border-right:1px solid rgba(234,220,197,.55);
+  border-bottom:1px solid rgba(234,220,197,.55);
+  padding:8px;
+  cursor:pointer;
+  background: rgba(255,255,255,.86);
+  position:relative;
+}
+.pp-day:nth-child(7n){border-right:none}
+.pp-day.is-out{opacity:.45}
+.pp-day:hover{background: rgba(255,241,214,.55)}
+.pp-day-num{font-weight:900; font-size:13px}
+.pp-day-dot{
+  position:absolute; right:8px; top:8px;
+  width:10px; height:10px; border-radius:999px;
+  background: rgba(217,119,6,.75);
+  border:1px solid rgba(217,119,6,.25);
+}
+.pp-day.is-today{
+  outline:2px solid rgba(217,119,6,.45);
+  outline-offset:-2px;
+}
+.pp-day.is-selected{
+  background: rgba(217,119,6,.10);
+  outline:2px solid rgba(217,119,6,.55);
+  outline-offset:-2px;
+}
+.pp-side{
+  border:1px solid var(--border);
+  border-radius: var(--r2);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding:14px;
+}
+.pp-side h3{margin:0 0 8px}
+.pp-ev{
+  border:1px solid rgba(234,220,197,.7);
+  border-radius:16px;
+  padding:10px 10px;
+  background: rgba(255,255,255,.85);
+  margin-bottom:10px;
+}
+.pp-ev-title{font-weight:900}
+.pp-ev-date{color:var(--muted); font-size:12px; margin-top:2px}
+.pp-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:10px;
+}
+.pp-link{
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(217,119,6,.28);
+  background: rgba(217,119,6,.08);
+  font-weight:800;
+}
+.pp-link:hover{filter:brightness(1.02)}
+.pp-wiki{
+  margin-top:10px;
+  border:1px solid rgba(234,220,197,.7);
+  border-radius:16px;
+  padding:10px;
+  background: rgba(255,255,255,.85);
+}
+.pp-wiki-title{font-weight:900; margin-bottom:6px}
+.pp-wiki-text{color:var(--muted); font-size:13px; line-height:1.5}
+@media (max-width: 980px){
+  .pp-cal{grid-template-columns: 1fr}
+}
