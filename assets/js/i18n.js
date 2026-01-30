@@ -69,6 +69,7 @@
     videosPlay: { en: "Play", hi: "चलाएँ" },
     videosPause: { en: "Pause", hi: "रोकें" },
     videosOpen: { en: "Open", hi: "खोलें" },
+    themeLabel: { en: "Theme", hi: "थीम" },
     gallerySubtitle: { en: "Photos & moments from tours, rituals, and kathas.", hi: "टूर, यज्ञ/पूजा और कथाओं के फोटो व क्षण।" },
     galleryBrowseTitle: { en: "Browse by Category", hi: "श्रेणी के अनुसार देखें" },
     galleryBrowseHint: { en: "Use Previous/Next or swipe on mobile.", hi: "Previous/Next दबाएँ या मोबाइल पर swipe करें।" },

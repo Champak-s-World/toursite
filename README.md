@@ -36,3 +36,11 @@ Run locally with VS Code Live Server (recommended).
 - Component: `assets/js/videos.js` + `assets/css/videos.css`
 - Uses IntersectionObserver to animate cards and auto play/pause media while scrolling.
 - Note: Browser autoplay policies may require videos to be muted (we set muted by default for mp4 and YouTube).
+
+
+## Themes (NEW)
+- UI: Theme dropdown in header
+- Code: `assets/js/theme.js`
+- Storage: localStorage key `pp_theme`
+- URL override: `?theme=saffron|dark|ocean|rose`
+- Variables overridden via `html[data-theme="..."]` in `assets/css/theme-saffron.css`
