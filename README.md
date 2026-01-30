@@ -28,3 +28,11 @@ Run locally with VS Code Live Server (recommended).
 - Data: `data/calendar.json`
 - Component: `assets/js/calendar.js` + `assets/css/calendar.css`
 - Auto search results: generates Google/YouTube/Wikipedia links and tries Wikipedia summary.
+
+
+## Videos (NEW)
+- Page: `videos.html`
+- Data: `data/videos.json`
+- Component: `assets/js/videos.js` + `assets/css/videos.css`
+- Uses IntersectionObserver to animate cards and auto play/pause media while scrolling.
+- Note: Browser autoplay policies may require videos to be muted (we set muted by default for mp4 and YouTube).

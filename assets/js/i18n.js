@@ -10,6 +10,7 @@
     navAcharyas: { en: "Acharyas", hi: "आचार्य" },
     navGallery: { en: "Gallery", hi: "गैलरी" },
     navCalendar: { en: "Calendar", hi: "कैलेंडर" },
+    navVideos: { en: "Videos", hi: "वीडियो" },
     navContact: { en: "Contact", hi: "संपर्क" },
 
     homeTitle: { en: "Spiritual Services & Pilgrimage Experiences", hi: "आध्यात्मिक सेवाएँ एवं तीर्थ यात्रा अनुभव" },
@@ -60,6 +61,14 @@
     calendarNoEvents: { en: "No occasions marked for this date.", hi: "इस तारीख के लिए कोई अवसर चिन्हित नहीं है।" },
     calendarPickDate: { en: "Pick a date to view details.", hi: "विवरण देखने के लिए तारीख चुनें।" },
     calendarAddToJson: { en: "Add/Edit occasions in data/calendar.json", hi: "अवसर जोड़ें/संपादित करें: data/calendar.json" },
+
+    videosTitle: { en: "Videos", hi: "वीडियो" },
+    videosSubtitle: { en: "Scroll to play. Videos animate in and auto pause when out of view.", hi: "स्क्रॉल करें — वीडियो एनिमेशन के साथ दिखेंगे और बाहर जाने पर अपने-आप रुकेंगे।" },
+    videosAddToJson: { en: "Add/Edit videos in data/videos.json", hi: "वीडियो जोड़ें/संपादित करें: data/videos.json" },
+    videosMutedNote: { en: "Auto-play works best when videos are muted.", hi: "ऑटो-प्ले म्यूट वीडियो पर सबसे अच्छा काम करता है।" },
+    videosPlay: { en: "Play", hi: "चलाएँ" },
+    videosPause: { en: "Pause", hi: "रोकें" },
+    videosOpen: { en: "Open", hi: "खोलें" },
     gallerySubtitle: { en: "Photos & moments from tours, rituals, and kathas.", hi: "टूर, यज्ञ/पूजा और कथाओं के फोटो व क्षण।" },
     galleryBrowseTitle: { en: "Browse by Category", hi: "श्रेणी के अनुसार देखें" },
     galleryBrowseHint: { en: "Use Previous/Next or swipe on mobile.", hi: "Previous/Next दबाएँ या मोबाइल पर swipe करें।" },

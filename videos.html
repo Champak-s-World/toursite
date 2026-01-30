@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Videos | Spiritual Services</title>
+  <meta name="description" content="Videos that animate and play on scroll using Intersection Observer." />
+  <meta name="theme-color" content="#d97706" />
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <link rel="stylesheet" href="assets/css/videos.css" />
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <section class="pp-hero">
+    <div class="pp-container">
+      <div class="pp-hero-card">
+        <h1 data-i18n="videosTitle">Videos</h1>
+        <p class="pp-muted" data-i18n="videosSubtitle">Scroll to play. Videos animate in and auto pause when out of view.</p>
+        <div class="pp-badges">
+          <span class="pp-badge" data-i18n="videosAddToJson">Add/Edit videos in data/videos.json</span>
+          <span class="pp-badge" data-i18n="videosMutedNote">Auto-play works best when videos are muted.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="pp-container pp-main">
+    <section class="pp-panel">
+      <div class="pp-vwrap" id="videosMount"></div>
+    </section>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/include-loader.js"></script>
+  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="data/site.config.js"></script>
+  <script src="assets/js/contact-utils.js"></script>
+  <script src="assets/js/external-scripts.js"></script>
+  <script src="assets/js/menu-toggle.js"></script>
+  <script src="assets/js/videos.js"></script>
+</body>
+</html>

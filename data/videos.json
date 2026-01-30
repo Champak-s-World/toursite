@@ -1,0 +1,92 @@
+{
+  "videos": [
+    {
+      "id": "example_spiritual_video",
+      "title": {
+        "en": "Spiritual Experience — Example Video",
+        "hi": "आध्यात्मिक अनुभव — उदाहरण वीडियो"
+      },
+      "desc": {
+        "en": "Sample video demonstrating automatic play with scroll animation.",
+        "hi": "स्क्रॉल एनिमेशन के साथ ऑटो-प्ले का उदाहरण वीडियो।"
+      },
+      "type": "youtube",
+      "youtubeId": "_hasaKTG3vw",
+      "tags": [
+        "spiritual",
+        "experience"
+      ],
+      "cta": {
+        "en": "Enquire on WhatsApp",
+        "hi": "WhatsApp पर पूछें"
+      },
+      "whatsappText": {
+        "en": "I want details about this spiritual experience video.",
+        "hi": "मुझे इस आध्यात्मिक अनुभव वीडियो की जानकारी चाहिए।"
+      }
+    },
+    {
+      "id": "ramkatha_intro",
+      "title": {
+        "en": "Shri Ramkatha — Short Clip (Example)",
+        "hi": "श्री रामकथा — छोटा क्लिप (उदाहरण)"
+      },
+      "desc": {
+        "en": "Replace with your actual Ramkatha promo video.",
+        "hi": "यहाँ अपना वास्तविक रामकथा प्रमो वीडियो रखें।"
+      },
+      "type": "youtube",
+      "youtubeId": "dQw4w9WgXcQ",
+      "tags": [
+        "katha",
+        "ram"
+      ],
+      "cta": {
+        "en": "Book Ramkatha",
+        "hi": "रामकथा बुक करें"
+      }
+    },
+    {
+      "id": "rudrabhishek",
+      "title": {
+        "en": "Rudrabhishek — Highlights (Example)",
+        "hi": "रुद्राभिषेक — हाइलाइट्स (उदाहरण)"
+      },
+      "desc": {
+        "en": "YouTube embed. Auto-play when visible (muted).",
+        "hi": "YouTube एम्बेड। दिखाई देने पर ऑटो-प्ले (म्यूट)।"
+      },
+      "type": "youtube",
+      "youtubeId": "DJwBtwbFXIY",
+      "tags": [
+        "ritual",
+        "shiv"
+      ],
+      "cta": {
+        "en": "Ask on WhatsApp",
+        "hi": "WhatsApp पर पूछें"
+      },
+      "whatsappText": {
+        "en": "I want Rudrabhishek arrangement details.",
+        "hi": "मुझे रुद्राभिषेक व्यवस्था की जानकारी चाहिए।"
+      }
+    },
+    {
+      "id": "local_mp4_demo",
+      "title": {
+        "en": "Local MP4 (Demo placeholder)",
+        "hi": "लोकल MP4 (डेमो)"
+      },
+      "desc": {
+        "en": "Put an MP4 in assets/videos/ and update the src.",
+        "hi": "assets/videos/ में MP4 रखें और src अपडेट करें।"
+      },
+      "type": "mp4",
+      "src": "assets/videos/demo.mp4",
+      "poster": "",
+      "tags": [
+        "tour"
+      ]
+    }
+  ]
+}
