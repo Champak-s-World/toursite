@@ -4,6 +4,7 @@
     siteName: { en: "Spiritual Services", hi: "आध्यात्मिक सेवाएँ" },
 
     navHome: { en: "Home", hi: "होम" },
+    navExperiences: { en: "Experiences", hi: "अनुभव" },
     navTours: { en: "Tours", hi: "टूर" },
     navRituals: { en: "Rituals", hi: "यज्ञ/पूजा" },
     navKatha: { en: "Katha", hi: "कथा" },
@@ -76,7 +77,20 @@
     galleryCategoryLabel: { en: "Category", hi: "श्रेणी" },
 
     footerLine: { en: "Tours • Yagya • Katha • Arrangements", hi: "टूर • यज्ञ • कथा • व्यवस्था" }
-  };
+  
+    experiencesTitle: { en: "Unified Experiences", hi: "एकीकृत अनुभव" },
+    experiencesSubtitle: { en: "Services auto-linked with calendar dates and videos using shared tags.", hi: "साझा टैग्स के आधार पर सेवाएँ, कैलेंडर तारीखें और वीडियो अपने-आप लिंक होते हैं।" },
+    experiencesSearchPlaceholder: { en: "Search services, festivals, videos…", hi: "सेवाएँ, पर्व, वीडियो खोजें…" },
+    experiencesHelpTitle: { en: "Help: How Experiences Work", hi: "सहायता: अनुभव कैसे काम करता है" },
+    experiencesHelpShow: { en: "Show", hi: "दिखाएँ" },
+    experiencesHelpHide: { en: "Hide", hi: "छिपाएँ" },
+    experiencesGoldenRule: { en: "Golden rule: Tags are the glue. If tags don't match, items won't link.", hi: "सुनहरा नियम: टैग्स ही कड़ी हैं। टैग नहीं मिले तो लिंक नहीं होगा।" },
+    experiencesHowToAdd: { en: "How to add new items", hi: "नया डेटा कैसे जोड़ें" },
+    experiencesExample: { en: "Example", hi: "उदाहरण" },
+    experiencesNextDate: { en: "Next date", hi: "अगली तारीख" },
+    experiencesRelatedVideo: { en: "Related video", hi: "संबंधित वीडियो" },
+    experiencesEnquire: { en: "Enquire on WhatsApp", hi: "WhatsApp पर पूछें" },
+};
 
   function getLang(){ return (window.PP_LANG && window.PP_LANG.getLang) ? window.PP_LANG.getLang() : "en"; }
   function t(key){
@@ -96,5 +110,18 @@
   window.addEventListener("pp:includesloaded", function(){ apply(); });
   window.addEventListener("pp:langchange", function(){ apply(); });
 
-  window.PP_I18N = { apply: apply, dict: I18N };
+  window.PP_I18N = { apply: apply, dict: I18N 
+    experiencesTitle: { en: "Unified Experiences", hi: "एकीकृत अनुभव" },
+    experiencesSubtitle: { en: "Services auto-linked with calendar dates and videos using shared tags.", hi: "साझा टैग्स के आधार पर सेवाएँ, कैलेंडर तारीखें और वीडियो अपने-आप लिंक होते हैं।" },
+    experiencesSearchPlaceholder: { en: "Search services, festivals, videos…", hi: "सेवाएँ, पर्व, वीडियो खोजें…" },
+    experiencesHelpTitle: { en: "Help: How Experiences Work", hi: "सहायता: अनुभव कैसे काम करता है" },
+    experiencesHelpShow: { en: "Show", hi: "दिखाएँ" },
+    experiencesHelpHide: { en: "Hide", hi: "छिपाएँ" },
+    experiencesGoldenRule: { en: "Golden rule: Tags are the glue. If tags don't match, items won't link.", hi: "सुनहरा नियम: टैग्स ही कड़ी हैं। टैग नहीं मिले तो लिंक नहीं होगा।" },
+    experiencesHowToAdd: { en: "How to add new items", hi: "नया डेटा कैसे जोड़ें" },
+    experiencesExample: { en: "Example", hi: "उदाहरण" },
+    experiencesNextDate: { en: "Next date", hi: "अगली तारीख" },
+    experiencesRelatedVideo: { en: "Related video", hi: "संबंधित वीडियो" },
+    experiencesEnquire: { en: "Enquire on WhatsApp", hi: "WhatsApp पर पूछें" },
+};
 })();

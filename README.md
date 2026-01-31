@@ -44,3 +44,10 @@ Run locally with VS Code Live Server (recommended).
 - Storage: localStorage key `pp_theme`
 - URL override: `?theme=saffron|dark|ocean|rose`
 - Variables overridden via `html[data-theme="..."]` in `assets/css/theme-saffron.css`
+
+
+## Experiences (NEW)
+- Page: `experiences.html`
+- Data: `data/services.json` (Option B)
+- Auto-links calendar + videos using shared tags.
+- Search: smart search dropdown groups Services / Occasions / Videos.

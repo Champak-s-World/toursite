@@ -1,0 +1,83 @@
+{
+  "services": [
+    {
+      "id": "rudrabhishek",
+      "type": "ritual",
+      "title": {
+        "en": "Rudrabhishek",
+        "hi": "रुद्राभिषेक"
+      },
+      "desc": {
+        "en": "Abhishek of Lord Shiva with Vedic mantras.",
+        "hi": "वैदिक मंत्रों द्वारा भगवान शिव का अभिषेक।"
+      },
+      "tags": [
+        "shiv",
+        "festival"
+      ],
+      "relatedVideos": [
+        "_hasaKTG3vw"
+      ],
+      "cta": {
+        "en": "Book Rudrabhishek",
+        "hi": "रुद्राभिषेक बुक करें"
+      },
+      "whatsappText": {
+        "en": "I want to book Rudrabhishek.",
+        "hi": "मैं रुद्राभिषेक बुक करना चाहता हूँ।"
+      }
+    },
+    {
+      "id": "ramkatha",
+      "type": "katha",
+      "title": {
+        "en": "Shri Ramkatha",
+        "hi": "श्री रामकथा"
+      },
+      "desc": {
+        "en": "Discourses on Shri Ramcharitmanas by renowned saints and scholars.",
+        "hi": "देश के सुप्रसिद्ध संतों/विद्वानों द्वारा श्री रामचरितमानस पर कथा।"
+      },
+      "tags": [
+        "ram",
+        "katha",
+        "festival"
+      ],
+      "relatedVideos": [],
+      "cta": {
+        "en": "Enquire Ramkatha",
+        "hi": "रामकथा पूछें"
+      },
+      "whatsappText": {
+        "en": "I want details about Shri Ramkatha arrangements.",
+        "hi": "मुझे श्री रामकथा व्यवस्था की जानकारी चाहिए।"
+      }
+    },
+    {
+      "id": "kashi_yatra",
+      "type": "tour",
+      "title": {
+        "en": "Kashi Yatra (Varanasi Tour)",
+        "hi": "काशी यात्रा (वाराणसी टूर)"
+      },
+      "desc": {
+        "en": "Guided spiritual tour in Kashi with temple visits and local support.",
+        "hi": "काशी में मंदिर दर्शन सहित मार्गदर्शित आध्यात्मिक यात्रा।"
+      },
+      "tags": [
+        "tour",
+        "kashi",
+        "varanasi"
+      ],
+      "relatedVideos": [],
+      "cta": {
+        "en": "Plan Kashi Yatra",
+        "hi": "काशी यात्रा प्लान करें"
+      },
+      "whatsappText": {
+        "en": "I want to plan a Kashi Yatra.",
+        "hi": "मुझे काशी यात्रा प्लान करनी है।"
+      }
+    }
+  ]
+}

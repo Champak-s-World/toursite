@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experiences | Spiritual Services</title>
+  <meta name="description" content="Unified experiences auto-linked with calendar dates and videos." />
+  <meta name="theme-color" content="#d97706" />
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <link rel="stylesheet" href="assets/css/experiences.css" />
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <section class="pp-hero">
+    <div class="pp-container">
+      <div class="pp-hero-card">
+        <h1 data-i18n="experiencesTitle">Unified Experiences</h1>
+        <p class="pp-muted" data-i18n="experiencesSubtitle">Services auto-linked with calendar dates and videos using shared tags.</p>
+
+        <div class="pp-search pp-results">
+          <input id="smartSearch" type="search" data-i18n-placeholder="experiencesSearchPlaceholder" placeholder="Search services, festivals, videos…" autocomplete="off" />
+          <div class="pp-results-box" id="resultsWrap" style="display:none"></div>
+        </div>
+
+        <div class="pp-help" id="expHelp">
+          <div class="pp-help-head">
+            <h3 class="pp-h3" style="margin:0" data-i18n="experiencesHelpTitle">Help: How Experiences Work</h3>
+            <button class="pp-help-btn" id="helpToggle" type="button" aria-expanded="false" data-i18n="experiencesHelpShow">Show</button>
+          </div>
+
+          <div id="helpBody" hidden>
+            <p class="pp-muted" style="margin-top:10px" data-i18n="experiencesGoldenRule">Golden rule: Tags are the glue. If tags don't match, items won't link.</p>
+            <div class="pp-flow">
+              <div class="pp-step">🛕 Service<br><span class="pp-muted">data/services.json</span></div>
+              <div class="pp-step">🏷️ Shared Tags<br><span class="pp-muted">shiv / ram / tour</span></div>
+              <div class="pp-step">📅 Next Date<br><span class="pp-muted">data/calendar.json</span></div>
+              <div class="pp-step">🎥 Related Video<br><span class="pp-muted">data/videos.json</span></div>
+            </div>
+
+            <h4 class="pp-h3" style="margin:8px 0" data-i18n="experiencesHowToAdd">How to add new items</h4>
+            <ol class="pp-muted" style="line-height:1.7;margin:0 0 10px 18px">
+              <li>Add a service in <b>data/services.json</b> with tags.</li>
+              <li>Add a calendar occasion in <b>data/calendar.json</b> with the same tags.</li>
+              <li>Add a video in <b>data/videos.json</b> with the same tags (or add its youtubeId in service.relatedVideos).</li>
+              <li>Reload — cards auto-update.</li>
+            </ol>
+
+            <div class="pp-code"><code>// service
+{ "id":"rudrabhishek", "tags":["shiv"], "relatedVideos":["_hasaKTG3vw"] }
+
+// calendar
+{ "date":"2026-02-14", "tags":["shiv"] }
+
+// video
+{ "youtubeId":"_hasaKTG3vw", "tags":["shiv"] }</code></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main class="pp-container pp-main">
+    <section class="pp-panel">
+      <h2 class="pp-h2" style="margin:0 0 6px">Experiences</h2>
+      <div class="pp-muted">Auto-linked cards (service + next date + video + WhatsApp CTA).</div>
+      <div class="pp-grid" id="expMount"></div>
+    </section>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/include-loader.js"></script>
+  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="data/site.config.js"></script>
+  <script src="assets/js/contact-utils.js"></script>
+  <script src="assets/js/external-scripts.js"></script>
+  <script src="assets/js/menu-toggle.js"></script>
+  <script src="assets/js/experiences-page.js"></script>
+</body>
+</html>
