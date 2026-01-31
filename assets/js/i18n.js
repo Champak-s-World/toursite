@@ -90,6 +90,21 @@
     experiencesNextDate: { en: "Next date", hi: "अगली तारीख" },
     experiencesRelatedVideo: { en: "Related video", hi: "संबंधित वीडियो" },
     experiencesEnquire: { en: "Enquire on WhatsApp", hi: "WhatsApp पर पूछें" },
+
+    tourMakerTitle: { en: "Tour Maker", hi: "टूर मेकर" },
+    tourMakerSubtitle: { en: "Search places, build an itinerary, save automatically, download, and send on WhatsApp.", hi: "जगहें खोजें, यात्रा सूची बनाएं, ऑटो-सेव, डाउनलोड करें और WhatsApp पर भेजें।" },
+    tourMakerSearchLabel: { en: "Search locations", hi: "लोकेशन खोजें" },
+    tourMakerSearchPh: { en: "Type: Kashi, Ayodhya, Prayagraj, Chitrakoot…", hi: "लिखें: काशी, अयोध्या, प्रयागराज, चित्रकूट…" },
+    tourMakerAdd: { en: "Add", hi: "जोड़ें" },
+    tourMakerAdded: { en: "Added", hi: "जुड़ गया" },
+    tourMakerItinerary: { en: "Your itinerary", hi: "आपकी यात्रा सूची" },
+    tourMakerEmpty: { en: "No places added yet.", hi: "अभी कोई जगह नहीं जोड़ी गई है।" },
+    tourMakerNotes: { en: "Notes (optional)", hi: "नोट्स (वैकल्पिक)" },
+    tourMakerNotesPh: { en: "E.g., dates, hotel, pickup point…", hi: "जैसे: तारीख, होटल, पिकअप पॉइंट…" },
+    tourMakerClear: { en: "Clear", hi: "क्लियर" },
+    tourMakerDownload: { en: "Download", hi: "डाउनलोड" },
+    tourMakerSendWA: { en: "Send on WhatsApp", hi: "WhatsApp पर भेजें" },
+    tourMakerAutoSaved: { en: "Auto-saved to your device.", hi: "आपके डिवाइस में ऑटो-सेव हो गया।" },
 };
 
   function getLang(){ return (window.PP_LANG && window.PP_LANG.getLang) ? window.PP_LANG.getLang() : "en"; }
@@ -103,6 +118,13 @@
     root.querySelectorAll("[data-i18n]").forEach(function(el){
       var val = t(el.getAttribute("data-i18n"));
       if (val !== null) el.textContent = val;
+    });
+
+    // placeholders
+    root.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const k = el.getAttribute("data-i18n-placeholder");
+      const v = dict[k] ? (dict[k][lang] || dict[k].en || "") : "";
+      if (v) el.setAttribute("placeholder", v);
     });
   }
 
@@ -123,5 +145,20 @@
     experiencesNextDate: { en: "Next date", hi: "अगली तारीख" },
     experiencesRelatedVideo: { en: "Related video", hi: "संबंधित वीडियो" },
     experiencesEnquire: { en: "Enquire on WhatsApp", hi: "WhatsApp पर पूछें" },
+
+    tourMakerTitle: { en: "Tour Maker", hi: "टूर मेकर" },
+    tourMakerSubtitle: { en: "Search places, build an itinerary, save automatically, download, and send on WhatsApp.", hi: "जगहें खोजें, यात्रा सूची बनाएं, ऑटो-सेव, डाउनलोड करें और WhatsApp पर भेजें।" },
+    tourMakerSearchLabel: { en: "Search locations", hi: "लोकेशन खोजें" },
+    tourMakerSearchPh: { en: "Type: Kashi, Ayodhya, Prayagraj, Chitrakoot…", hi: "लिखें: काशी, अयोध्या, प्रयागराज, चित्रकूट…" },
+    tourMakerAdd: { en: "Add", hi: "जोड़ें" },
+    tourMakerAdded: { en: "Added", hi: "जुड़ गया" },
+    tourMakerItinerary: { en: "Your itinerary", hi: "आपकी यात्रा सूची" },
+    tourMakerEmpty: { en: "No places added yet.", hi: "अभी कोई जगह नहीं जोड़ी गई है।" },
+    tourMakerNotes: { en: "Notes (optional)", hi: "नोट्स (वैकल्पिक)" },
+    tourMakerNotesPh: { en: "E.g., dates, hotel, pickup point…", hi: "जैसे: तारीख, होटल, पिकअप पॉइंट…" },
+    tourMakerClear: { en: "Clear", hi: "क्लियर" },
+    tourMakerDownload: { en: "Download", hi: "डाउनलोड" },
+    tourMakerSendWA: { en: "Send on WhatsApp", hi: "WhatsApp पर भेजें" },
+    tourMakerAutoSaved: { en: "Auto-saved to your device.", hi: "आपके डिवाइस में ऑटो-सेव हो गया।" },
 };
 })();

@@ -51,3 +51,12 @@ Run locally with VS Code Live Server (recommended).
 - Data: `data/services.json` (Option B)
 - Auto-links calendar + videos using shared tags.
 - Search: smart search dropdown groups Services / Occasions / Videos.
+
+
+## Tour Maker (NEW)
+- Page: `tour-maker.html`
+- Search: OpenStreetMap Nominatim (client-side)
+- Build itinerary: add/remove/reorder
+- Auto-save: localStorage key `pp_tour_maker_v1`
+- Export: Download JSON
+- Share: WhatsApp message with Google Maps links

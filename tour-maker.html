@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tour Maker | Spiritual Services</title>
+  <meta name="description" content="Build a tour itinerary: search locations, add, autosave, download, and send on WhatsApp." />
+  <meta name="theme-color" content="#d97706" />
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <link rel="stylesheet" href="assets/css/tour-maker.css" />
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <section class="pp-hero">
+    <div class="pp-container">
+      <div class="pp-hero-card">
+        <h1 data-i18n="tourMakerTitle">Tour Maker</h1>
+        <p class="pp-muted" data-i18n="tourMakerSubtitle">Search places, build an itinerary, save automatically, download, and send on WhatsApp.</p>
+        <div class="tm-badge" id="tmSavedBadge" data-i18n="tourMakerAutoSaved">Auto-saved to your device.</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="pp-container pp-main">
+    <div class="tm-grid">
+      <section class="tm-card">
+        <div class="pp-label" data-i18n="tourMakerSearchLabel">Search locations</div>
+        <div class="tm-searchrow">
+          <input id="tmSearch" type="search" data-i18n-placeholder="tourMakerSearchPh" placeholder="Type: Kashi, Ayodhya, Prayagraj, Chitrakoot…" autocomplete="off" />
+        </div>
+        <div class="tm-list" id="tmResults"></div>
+        <p class="pp-muted" style="margin-top:10px">
+          Tip: You can search <b>India</b> and <b>outside India</b> locations. Results come from OpenStreetMap.
+        </p>
+      </section>
+
+      <aside class="tm-card">
+        <div class="pp-label" data-i18n="tourMakerItinerary">Your itinerary</div>
+        <div class="tm-list" id="tmItinerary"></div>
+
+        <div style="margin-top:12px">
+          <div class="pp-label" data-i18n="tourMakerNotes">Notes (optional)</div>
+          <textarea class="tm-textarea" id="tmNotes" data-i18n-placeholder="tourMakerNotesPh" placeholder="E.g., dates, hotel, pickup point…"></textarea>
+        </div>
+
+        <div class="tm-stickybar">
+          <button class="pp-btn pp-btn-outline" id="tmClear" type="button" data-i18n="tourMakerClear">Clear</button>
+          <button class="pp-btn pp-btn-outline" id="tmDownload" type="button" data-i18n="tourMakerDownload">Download</button>
+          <button class="pp-btn" id="tmWhatsApp" type="button" data-i18n="tourMakerSendWA">Send on WhatsApp</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/include-loader.js"></script>
+  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="data/site.config.js"></script>
+  <script src="assets/js/contact-utils.js"></script>
+  <script src="assets/js/external-scripts.js"></script>
+  <script src="assets/js/menu-toggle.js"></script>
+  <script src="assets/js/tour-maker.js"></script>
+</body>
+</html>
