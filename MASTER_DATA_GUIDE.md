@@ -33,3 +33,11 @@ Add these optional keys to any item in master files:
 - `featuredRank`: 1,2,3...
 - `featuredNote`: {en:"...", hi:"..."}
 Featured sections will auto-render from these flags.
+
+
+## Calendar-powered Featured
+Fill upcoming dates in `data/master/occasions.json` and link items:
+- `relatedTours`: ["kashi_darshan"]
+- `relatedRituals`: ["rudrabhishek"]
+- `relatedKathas`: ["ramkatha"]
+Featured sections will first show linked items from the **next upcoming occasions**.

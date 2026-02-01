@@ -22,6 +22,7 @@
     .md-note{border-left:6px solid var(--brand);background:rgba(255,241,214,.55);border-radius:16px;padding:10px 12px;margin-top:10px;font-weight:900}
     .md-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
   </style>
+  <link rel="stylesheet" href="assets/css/experiences.css" />
 </head>
 <body>
   <div data-include="includes/header.html"></div>
@@ -42,6 +43,13 @@
   </section>
 
   <main class="pp-container pp-main">
+
+    <section class="pp-panel" style="margin-top:14px">
+      <h2 class="pp-h2" style="margin:0 0 6px">Featured</h2>
+      <div class="pp-muted">Auto from upcoming occasions (Calendar) with fallback to curated featured flags.</div>
+      <div class="pp-grid" data-featured-mount data-featured-mode="mixed" data-featured-limit="3" style="margin-top:12px"></div>
+    </section>
+
     <div class="md-grid">
       <section class="md-card"><h2 class="md-h">Tours</h2><div class="md-muted">data/master/tours.json</div><div class="md-list" id="listTours"></div></section>
       <section class="md-card"><h2 class="md-h">Rituals</h2><div class="md-muted">data/master/rituals.json</div><div class="md-list" id="listRituals"></div></section>
@@ -101,5 +109,6 @@
     window.addEventListener("pp:langchange", ()=>location.reload());
   })();
   </script>
+  <script src="assets/js/featured.js"></script>
 </body>
 </html>

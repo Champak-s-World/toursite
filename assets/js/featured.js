@@ -1,7 +1,6 @@
 (function(){
   "use strict";
 
-  // Mounts: any element with data-featured-mount will be filled.
   const mounts = Array.from(document.querySelectorAll("[data-featured-mount]"));
   if(!mounts.length) return;
 
@@ -34,17 +33,63 @@
     return featured.slice(0, maxItems);
   }
 
-  function card(item, type){
+  function parseDateYMD(s){
+    if(!s || typeof s!=="string") return null;
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s.trim());
+    if(!m) return null;
+    const y=+m[1], mo=+m[2]-1, d=+m[3];
+    const dt = new Date(Date.UTC(y, mo, d, 0, 0, 0));
+    return isNaN(dt.getTime()) ? null : dt;
+  }
+
+  function todayUTC(){
+    const now=new Date();
+    return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0,0,0));
+  }
+
+  function upcomingOccasions(occasions, count){
+    const base=todayUTC().getTime();
+    const list=(occasions||[]).map(o=>({o, dt:parseDateYMD(o.date)}))
+      .filter(x=>x.dt && x.dt.getTime()>=base)
+      .sort((a,b)=>a.dt.getTime()-b.dt.getTime())
+      .slice(0, count)
+      .map(x=>x.o);
+    return list;
+  }
+
+  function indexById(arr){
+    const map=new Map();
+    (arr||[]).forEach(x=>{ if(x && x.id) map.set(x.id, x); });
+    return map;
+  }
+
+  function card(item, type, badgeText){
     const el=document.createElement("article");
     el.className="pp-exp";
 
     const top=document.createElement("div");
     top.className="pp-exp-top";
 
+    const hwrap=document.createElement("div");
+    hwrap.style.display="flex";
+    hwrap.style.alignItems="center";
+    hwrap.style.justifyContent="space-between";
+    hwrap.style.gap="10px";
+
     const h=document.createElement("h3");
     h.className="pp-exp-title";
+    h.style.margin="0";
     h.textContent = t(item.title) || item.id || type;
-    top.appendChild(h);
+    hwrap.appendChild(h);
+
+    if(badgeText){
+      const b=document.createElement("span");
+      b.className="pp-chip";
+      b.textContent=badgeText;
+      hwrap.appendChild(b);
+    }
+
+    top.appendChild(hwrap);
 
     const d=document.createElement("div");
     d.className="pp-exp-desc";
@@ -84,7 +129,6 @@
     a.textContent = t(item.ctaText) || (getLang()==="hi" ? "WhatsApp पर पूछें" : "Enquire on WhatsApp");
     actions.appendChild(a);
 
-    // Secondary action for tours: add to tour-maker
     if(type==="tour"){
       const b=document.createElement("button");
       b.className="pp-btn pp-btn-outline";
@@ -112,44 +156,83 @@
     return el;
   }
 
+  async function renderCuratedFeatured(limit){
+    const [tours, rituals, kathas] = await Promise.all([
+      loadJson("data/master/tours.json"),
+      loadJson("data/master/rituals.json"),
+      loadJson("data/master/kathas.json")
+    ]);
+    let items=[];
+    items = items.concat(pickFeatured(tours.tours, limit).map(x=>({x, type:"tour"})));
+    items = items.concat(pickFeatured(rituals.rituals, limit).map(x=>({x, type:"ritual"})));
+    items = items.concat(pickFeatured(kathas.kathas, limit).map(x=>({x, type:"katha"})));
+    items.sort((a,b)=>(a.x.featuredRank||999)-(b.x.featuredRank||999));
+    return items.slice(0, limit);
+  }
+
+  async function renderCalendarFeatured(limit){
+    const [occ, tours, rituals, kathas] = await Promise.all([
+      loadJson("data/master/occasions.json"),
+      loadJson("data/master/tours.json"),
+      loadJson("data/master/rituals.json"),
+      loadJson("data/master/kathas.json")
+    ]);
+
+    const upcoming = upcomingOccasions(occ.occasions, Math.max(1, Math.min(10, limit)));
+    const tMap=indexById(tours.tours);
+    const rMap=indexById(rituals.rituals);
+    const kMap=indexById(kathas.kathas);
+
+    const out=[];
+    const seen=new Set();
+    upcoming.forEach(o=>{
+      const badge = (o && o.date) ? o.date : "";
+      (o.relatedTours||[]).forEach(id=>{
+        const it=tMap.get(id);
+        if(it && !seen.has("tour:"+id)){ out.push({x:it, type:"tour", badge}); seen.add("tour:"+id); }
+      });
+      (o.relatedRituals||[]).forEach(id=>{
+        const it=rMap.get(id);
+        if(it && !seen.has("ritual:"+id)){ out.push({x:it, type:"ritual", badge}); seen.add("ritual:"+id); }
+      });
+      (o.relatedKathas||[]).forEach(id=>{
+        const it=kMap.get(id);
+        if(it && !seen.has("katha:"+id)){ out.push({x:it, type:"katha", badge}); seen.add("katha:"+id); }
+      });
+    });
+
+    return out.slice(0, limit);
+  }
+
   async function renderMount(mount){
-    const type = (mount.getAttribute("data-featured-type")||"all").toLowerCase();
+    const mode = (mount.getAttribute("data-featured-mode")||"mixed").toLowerCase(); // calendar|curated|mixed
     const limit = parseInt(mount.getAttribute("data-featured-limit")||"3", 10);
+
     mount.innerHTML = "";
-
     try{
-      const [tours, rituals, kathas] = await Promise.all([
-        loadJson("data/master/tours.json"),
-        loadJson("data/master/rituals.json"),
-        loadJson("data/master/kathas.json")
-      ]);
-
       let items=[];
-      if(type==="tour" || type==="all") items = items.concat(pickFeatured(tours.tours, limit).map(x=>({x, type:"tour"})));
-      if(type==="ritual" || type==="all") items = items.concat(pickFeatured(rituals.rituals, limit).map(x=>({x, type:"ritual"})));
-      if(type==="katha" || type==="all") items = items.concat(pickFeatured(kathas.kathas, limit).map(x=>({x, type:"katha"})));
-
-      // Global sort by featuredRank within each type, then stable
-      items.sort((a,b)=>(a.x.featuredRank||999)-(b.x.featuredRank||999));
-
-      // If "all", cap to limit overall (not per type)
-      if(type==="all") items = items.slice(0, limit);
+      if(mode==="calendar"){
+        items = await renderCalendarFeatured(limit);
+      } else if(mode==="curated"){
+        items = await renderCuratedFeatured(limit);
+      } else {
+        items = await renderCalendarFeatured(limit);
+        if(!items.length) items = await renderCuratedFeatured(limit);
+      }
 
       if(!items.length){
-        mount.innerHTML = "<div class='pp-muted'>(No featured items set yet. Add <code>featured:true</code> in master JSON.)</div>";
+        mount.innerHTML = "<div class='pp-muted'>(No featured items yet. Add upcoming occasions with related ids, or set featured:true in master JSON.)</div>";
         return;
       }
 
-      items.forEach(({x, type})=> mount.appendChild(card(x, type)));
+      items.forEach(({x, type, badge})=> mount.appendChild(card(x, type, badge)));
     }catch(err){
-      mount.innerHTML = "<div class='pp-muted'>Featured could not load. Please use a local server (Live Server) or GitHub Pages.</div>";
+      mount.innerHTML = "<div class='pp-muted'>Featured could not load. Use a local server (Live Server) or GitHub Pages.</div>";
       console.error(err);
     }
   }
 
-  function init(){
-    mounts.forEach(renderMount);
-  }
+  function init(){ mounts.forEach(renderMount); }
 
   init();
   window.addEventListener("pp:langchange", ()=> init());
