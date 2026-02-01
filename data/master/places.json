@@ -1,0 +1,293 @@
+{
+  "cities": [
+    {
+      "id": "varanasi",
+      "name": {
+        "en": "Varanasi (Kashi)",
+        "hi": "वाराणसी (काशी)"
+      },
+      "lat": 25.3176452,
+      "lng": 82.9739144,
+      "radiusKm": 30,
+      "tags": [
+        "kashi",
+        "ghats",
+        "temple",
+        "ganga"
+      ],
+      "heroImage": "https://picsum.photos/seed/kashi/1200/700",
+      "places": [
+        {
+          "id": "kashi-vishwanath",
+          "name": {
+            "en": "Kashi Vishwanath Temple",
+            "hi": "काशी विश्वनाथ मंदिर"
+          },
+          "lat": 25.310853,
+          "lng": 83.010678,
+          "category": "temple",
+          "images": [
+            "https://picsum.photos/seed/vishwanath1/900/600",
+            "https://picsum.photos/seed/vishwanath2/900/600",
+            "https://picsum.photos/seed/vishwanath3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "One of the most revered Shiva temples.",
+            "hi": "भगवान शिव के सबसे पवित्र मंदिरों में से एक।"
+          }
+        },
+        {
+          "id": "dashashwamedh-ghat",
+          "name": {
+            "en": "Dashashwamedh Ghat (Ganga Aarti)",
+            "hi": "दशाश्वमेध घाट (गंगा आरती)"
+          },
+          "lat": 25.306874,
+          "lng": 83.01047,
+          "category": "ghat",
+          "images": [
+            "https://picsum.photos/seed/aarti1/900/600",
+            "https://picsum.photos/seed/aarti2/900/600",
+            "https://picsum.photos/seed/aarti3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Evening Ganga Aarti is a must-see experience.",
+            "hi": "संध्या गंगा आरती एक अद्भुत अनुभव है।"
+          }
+        },
+        {
+          "id": "sarnath",
+          "name": {
+            "en": "Sarnath",
+            "hi": "सारनाथ"
+          },
+          "lat": 25.372489,
+          "lng": 83.022756,
+          "category": "heritage",
+          "images": [
+            "https://picsum.photos/seed/sarnath1/900/600",
+            "https://picsum.photos/seed/sarnath2/900/600",
+            "https://picsum.photos/seed/sarnath3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Historic Buddhist site where Buddha gave his first sermon.",
+            "hi": "बौद्ध धर्म का ऐतिहासिक स्थल।"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ayodhya",
+      "name": {
+        "en": "Ayodhya",
+        "hi": "अयोध्या"
+      },
+      "lat": 26.799,
+      "lng": 82.204,
+      "radiusKm": 25,
+      "tags": [
+        "ram",
+        "temple",
+        "sarayu"
+      ],
+      "heroImage": "https://picsum.photos/seed/ayodhya/1200/700",
+      "places": [
+        {
+          "id": "ram-mandir",
+          "name": {
+            "en": "Shri Ram Janmabhoomi Mandir",
+            "hi": "श्री राम जन्मभूमि मंदिर"
+          },
+          "lat": 26.7956,
+          "lng": 82.1945,
+          "category": "temple",
+          "images": [
+            "https://picsum.photos/seed/rammandir1/900/600",
+            "https://picsum.photos/seed/rammandir2/900/600",
+            "https://picsum.photos/seed/rammandir3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Sacred birthplace of Lord Ram.",
+            "hi": "भगवान राम की जन्मभूमि।"
+          }
+        },
+        {
+          "id": "hanuman-garhi",
+          "name": {
+            "en": "Hanuman Garhi",
+            "hi": "हनुमान गढ़ी"
+          },
+          "lat": 26.7981,
+          "lng": 82.2019,
+          "category": "temple",
+          "images": [
+            "https://picsum.photos/seed/hanuman1/900/600",
+            "https://picsum.photos/seed/hanuman2/900/600",
+            "https://picsum.photos/seed/hanuman3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Famous temple dedicated to Hanuman.",
+            "hi": "हनुमान जी का प्रसिद्ध मंदिर।"
+          }
+        },
+        {
+          "id": "sarayu-ghat",
+          "name": {
+            "en": "Sarayu Ghat",
+            "hi": "सरयू घाट"
+          },
+          "lat": 26.8009,
+          "lng": 82.2076,
+          "category": "ghat",
+          "images": [
+            "https://picsum.photos/seed/sarayu1/900/600",
+            "https://picsum.photos/seed/sarayu2/900/600",
+            "https://picsum.photos/seed/sarayu3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Riverside aarti and peaceful walks.",
+            "hi": "आरती और शांत टहलने के लिए सुंदर स्थान।"
+          }
+        }
+      ]
+    },
+    {
+      "id": "prayagraj",
+      "name": {
+        "en": "Prayagraj",
+        "hi": "प्रयागराज"
+      },
+      "lat": 25.4358,
+      "lng": 81.8463,
+      "radiusKm": 35,
+      "tags": [
+        "sangam",
+        "kumbh",
+        "ghat"
+      ],
+      "heroImage": "https://picsum.photos/seed/prayagraj/1200/700",
+      "places": [
+        {
+          "id": "triveni-sangam",
+          "name": {
+            "en": "Triveni Sangam",
+            "hi": "त्रिवेणी संगम"
+          },
+          "lat": 25.4309,
+          "lng": 81.885,
+          "category": "ghat",
+          "images": [
+            "https://picsum.photos/seed/sangam1/900/600",
+            "https://picsum.photos/seed/sangam2/900/600",
+            "https://picsum.photos/seed/sangam3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Confluence of Ganga, Yamuna, and Saraswati (mythical).",
+            "hi": "गंगा-यमुना-सरस्वती का संगम।"
+          }
+        },
+        {
+          "id": "allahabad-fort",
+          "name": {
+            "en": "Allahabad Fort (View Point)",
+            "hi": "इलाहाबाद किला (दर्शन स्थल)"
+          },
+          "lat": 25.4297,
+          "lng": 81.8866,
+          "category": "heritage",
+          "images": [
+            "https://picsum.photos/seed/fort1/900/600",
+            "https://picsum.photos/seed/fort2/900/600",
+            "https://picsum.photos/seed/fort3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Historic fort near Sangam (external view).",
+            "hi": "संगम के पास ऐतिहासिक किला।"
+          }
+        },
+        {
+          "id": "anand-bhavan",
+          "name": {
+            "en": "Anand Bhavan",
+            "hi": "आनंद भवन"
+          },
+          "lat": 25.459,
+          "lng": 81.8553,
+          "category": "museum",
+          "images": [
+            "https://picsum.photos/seed/anand1/900/600",
+            "https://picsum.photos/seed/anand2/900/600",
+            "https://picsum.photos/seed/anand3/900/600"
+          ],
+          "videos": [
+            {
+              "type": "youtube",
+              "id": "_hasaKTG3vw",
+              "title": "Example Video"
+            }
+          ],
+          "desc": {
+            "en": "Museum and historic home associated with the Nehru family.",
+            "hi": "संग्रहालय और ऐतिहासिक भवन।"
+          }
+        }
+      ]
+    }
+  ]
+}

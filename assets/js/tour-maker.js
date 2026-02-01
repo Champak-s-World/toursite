@@ -2,6 +2,57 @@
   "use strict";
 
   const STORAGE_KEY = "pp_tour_maker_v1";
+
+  let LOC=null;
+  const locByPlaceId = new Map();
+  const locByName = new Map();
+  function normName(s){ return String(s||"").trim().toLowerCase().replace(/\s+/g," "); }
+
+  async function loadLocations(){
+    try{
+      const res = await fetch("data/master/locations.json", {cache:"no-store"});
+      LOC = await res.json();
+      (LOC.cities||[]).forEach(city=>{
+        (city.places||[]).forEach(pl=>{
+          if(pl && pl.id){
+            locByPlaceId.set(pl.id, pl);
+            if(pl.name){
+              const en = pl.name.en || "";
+              const hi = pl.name.hi || "";
+              if(en) locByName.set(normName(en), pl);
+              if(hi) locByName.set(normName(hi), pl);
+            }
+          }
+        });
+      });
+    }catch(e){
+      console.warn("locations.json not loaded", e);
+    }
+  }
+
+  function hasCoords(x){ return x && typeof x.lat==="number" && isFinite(x.lat) && typeof x.lng==="number" && isFinite(x.lng); }
+
+  function enrichItinerary(it){
+    let changed=false;
+    const out = (it||[]).map(s=>{
+      if(!s || !s.name) return s;
+      if(hasCoords(s)) return s;
+      const meta = s.meta || {};
+      let pl=null;
+      if(meta.placeId && locByPlaceId.has(meta.placeId)) pl = locByPlaceId.get(meta.placeId);
+      else {
+        const n = normName(s.name);
+        if(locByName.has(n)) pl = locByName.get(n);
+      }
+      if(pl && typeof pl.lat==="number" && typeof pl.lng==="number"){
+        changed=true;
+        return Object.assign({}, s, {lat:pl.lat, lng:pl.lng});
+      }
+      return s;
+    });
+    return {out, changed};
+  }
+
   const searchInput = document.getElementById("tmSearch");
   const resultsMount = document.getElementById("tmResults");
   const itineraryMount = document.getElementById("tmItinerary");
@@ -41,7 +92,13 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       if(!raw) return;
       const obj = JSON.parse(raw);
-      state.itinerary = Array.isArray(obj.itinerary) ? obj.itinerary : [];
+      const base = Array.isArray(obj.itinerary) ? obj.itinerary : [];
+      const enriched = enrichItinerary(base);
+      state.itinerary = enriched.out;
+      if(enriched.changed){
+        obj.itinerary = enriched.out;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
+      }
       state.notes = obj.notes || "";
       if(notesEl) notesEl.value = state.notes;
       if(savedBadge && obj.updatedAt){
@@ -259,7 +316,7 @@
       lines.push(getLang()==="hi" ? "📝 नोट्स:" : "📝 Notes:");
       lines.push(state.notes.trim());
     }
-    return lines.join("  ");
+    return lines.join("\n");
   }
 
   if(btnWA){

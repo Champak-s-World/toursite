@@ -1,6 +1,51 @@
 {
   "tours": [
     {
+      "id": "champ_darshan",
+      "title": {
+        "en": "Champ Darshan & Pujan",
+        "hi": "काशी दर्शन एवं पूजन"
+      },
+      "region": "Uttar Pradesh, India",
+      "duration": "2 Days",
+      "locations": [
+        "Kashi Vishwanath Temple",
+        "Ganga Aarti",
+        "Sarnath"
+      ],
+      "activities": [
+        "Temple darshan",
+        "Aarti",
+        "Boat ride (optional)"
+      ],
+      "bestFor": [
+        "family",
+        "elders",
+        "first-time"
+      ],
+      "tags": [
+        "tour",
+        "kashi",
+        "varanasi",
+        "shiv",
+        "ganga"
+      ],
+      "ctaText": {
+        "en": "Plan Kashi Yatra",
+        "hi": "काशी यात्रा प्लान करें"
+      },
+      "whatsappText": {
+        "en": "I want to plan Kashi Darshan & Pujan.",
+        "hi": "मुझे काशी दर्शन एवं पूजन की जानकारी चाहिए।"
+      },
+      "featured": true,
+      "featuredRank": 1,
+      "featuredNote": {
+        "en": "Popular pilgrimage plan.",
+        "hi": "लोकप्रिय यात्रा योजना।"
+      }
+    },
+    {
       "id": "kashi_darshan",
       "title": {
         "en": "Kashi Darshan & Pujan",

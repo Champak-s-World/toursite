@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Map Tours • Spiritual Services</title>
+
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <link rel="stylesheet" href="assets/css/experiences.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <style>
+    .pp-map-wrap{display:grid; grid-template-columns: 1.25fr .75fr; gap:14px}
+    #ppMap{height: 70vh; min-height: 520px; border-radius: var(--r); overflow:hidden; border:1px solid var(--border); box-shadow: var(--shadow); background:var(--card)}
+    .pp-side{display:flex; flex-direction:column; gap:12px}
+    .pp-input{width:100%; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background: rgba(255,255,255,.85)}
+    html[data-theme="dark"] .pp-input{background: rgba(17,24,39,.75); color: var(--ink)}
+    .pp-kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; opacity:.85}
+    .pp-loc-card{display:flex; gap:10px; align-items:flex-start}
+    .pp-thumb{width:76px; height:56px; border-radius:12px; object-fit:cover; border:1px solid var(--border)}
+    .pp-loc-title{font-weight:900}
+    .pp-small{font-size:13px}
+    .pp-actions{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .pp-chipbtn{cursor:pointer}
+    @media (max-width: 980px){
+      .pp-map-wrap{grid-template-columns:1fr}
+      #ppMap{height: 52vh; min-height: 420px}
+    }
+  </style>
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <main class="pp-container pp-main">
+    <section class="pp-panel">
+      <h1 class="pp-h1" style="margin:0 0 6px">Map Tours</h1>
+      <div class="pp-muted">
+        Explore <b>Varanasi</b>, <b>Ayodhya</b> and <b>Prayagraj</b> with tourist places.
+        Use <span class="pp-kbd">Current Location</span> to get nearby suggestions, then add places to <b>Tour Maker</b>.
+      </div>
+      <div class="pp-actions" style="margin-top:10px">
+        <button class="pp-btn" id="btnLocate">Use Current Location</button>
+        <a class="pp-btn pp-btn-outline" href="tour-maker.html">Open Tour Maker</a>
+        <a class="pp-btn pp-btn-outline" href="gallery.html">Open Gallery</a>
+      </div>
+    </section>
+
+    <div class="pp-map-wrap">
+      <div id="ppMap" aria-label="Map"></div>
+
+      <aside class="pp-side">
+        <section class="pp-panel">
+          <div>
+            <div class="pp-h2" style="margin:0">Search places</div>
+            <div class="pp-muted pp-small">Type city/place/tag (e.g., <b>ghat</b>, <b>ram</b>, <b>kashi</b>).</div>
+          </div>
+          <input class="pp-input" id="q" placeholder="Search…" />
+          <div class="pp-muted pp-small" id="hint" style="margin-top:8px"></div>
+        </section>
+
+        <section class="pp-panel">
+          <div class="pp-h2" style="margin:0 0 8px">Selected place</div>
+          <div id="selected" class="pp-muted">Tap a marker to view details.</div>
+        </section>
+
+        <section class="pp-panel">
+          <div class="pp-h2" style="margin:0 0 6px">Quick add</div>
+          <div class="pp-muted pp-small">Add a whole city’s top places to Tour Maker:</div>
+          <div class="pp-actions">
+            <button class="pp-btn pp-btn-outline" data-city="varanasi">Varanasi</button>
+            <button class="pp-btn pp-btn-outline" data-city="ayodhya">Ayodhya</button>
+            <button class="pp-btn pp-btn-outline" data-city="prayagraj">Prayagraj</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/includes.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/featured.js"></script>
+  <script src="assets/js/maps-tours.js"></script>
+
+  <script src="https://programmer-s-picnic.github.io/json-images/find-on-page.js"></script>
+</body>
+</html>

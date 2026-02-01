@@ -72,3 +72,10 @@ Run locally with VS Code Live Server (recommended).
 - Add `featured:true` and `featuredRank` in master JSON items.
 - Shared renderer: `assets/js/featured.js`
 - Pages: Tours/Rituals/Katha show Featured section from master data.
+
+
+## Tour Route Map (NEW)
+- Page: `route.html`
+- Draws itinerary from Tour Maker (`localStorage` key `pp_tour_maker_v1`).
+- Shows markers + polyline route + total distance.
+- Reorder stops, auto-sort (nearest neighbor), start from current location, WhatsApp share, download route JSON.
