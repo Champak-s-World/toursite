@@ -37,6 +37,12 @@
       "whatsappText": {
         "en": "I want to plan Kashi Darshan & Pujan.",
         "hi": "मुझे काशी दर्शन एवं पूजन की जानकारी चाहिए।"
+      },
+      "featured": true,
+      "featuredRank": 1,
+      "featuredNote": {
+        "en": "Popular pilgrimage plan.",
+        "hi": "लोकप्रिय यात्रा योजना।"
       }
     },
     {

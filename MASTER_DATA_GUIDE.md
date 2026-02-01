@@ -25,3 +25,11 @@ Optional: description, relatedRituals[], relatedTours[], relatedKathas[]
 ## Golden rule
 - Tags connect content.
 - Occasion related* arrays connect by IDs.
+
+
+## Featured items
+Add these optional keys to any item in master files:
+- `featured`: true
+- `featuredRank`: 1,2,3...
+- `featuredNote`: {en:"...", hi:"..."}
+Featured sections will auto-render from these flags.

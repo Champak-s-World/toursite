@@ -66,3 +66,9 @@ Run locally with VS Code Live Server (recommended).
 - Files: `data/master/tours.json`, `rituals.json`, `kathas.json`, `occasions.json`
 - Preview page: `master-data.html`
 - Guide: `MASTER_DATA_GUIDE.md`
+
+
+## Featured (NEW)
+- Add `featured:true` and `featuredRank` in master JSON items.
+- Shared renderer: `assets/js/featured.js`
+- Pages: Tours/Rituals/Katha show Featured section from master data.

@@ -23,6 +23,12 @@
       "whatsappText": {
         "en": "I want details for arranging Shri Ramkatha.",
         "hi": "मुझे श्री रामकथा की व्यवस्था की जानकारी चाहिए।"
+      },
+      "featured": true,
+      "featuredRank": 1,
+      "featuredNote": {
+        "en": "Renowned storytellers available.",
+        "hi": "प्रसिद्ध वक्ता उपलब्ध।"
       }
     },
     {

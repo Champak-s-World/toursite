@@ -19,19 +19,13 @@
     </div>
   </section>
   <main class="pp-container pp-main">
-    <section class="pp-panel">
-      <div class="pp-panel-row">
-        <div>
-          <h2 class="pp-h2">Coming next</h2>
-          <p class="pp-muted">Data-driven content + booking CTAs.</p>
-        </div>
-      </div>
-      <div class="pp-grid">
-        <article class="pp-card"><div class="pp-card-top"><div class="pp-icon">✨</div><div class="pp-card-title">Dummy Card</div></div><div class="pp-card-body"><p class="pp-card-desc">Replace with real content.</p><div class="pp-card-actions"><a class="pp-btn pp-btn-outline" href="gallery.html">See Gallery</a></div></div></article>
-        <article class="pp-card"><div class="pp-card-top"><div class="pp-icon">🕉️</div><div class="pp-card-title">Dummy Card</div></div><div class="pp-card-body"><p class="pp-card-desc">Replace with real content.</p><div class="pp-card-actions"><a class="pp-btn pp-btn-outline" href="contact.html">Contact</a></div></div></article>
-        <article class="pp-card"><div class="pp-card-top"><div class="pp-icon">📞</div><div class="pp-card-title">Dummy Card</div></div><div class="pp-card-body"><p class="pp-card-desc">Replace with real content.</p><div class="pp-card-actions"><a class="pp-btn pp-btn-outline" href="index.html">Home</a></div></div></article>
-      </div>
+    
+    <section class="pp-panel" style="margin-top:14px">
+      <h2 class="pp-h2" style="margin:0 0 6px">Featured</h2>
+      <div class="pp-muted">Curated from master data using <code>featured:true</code> and <code>featuredRank</code>.</div>
+      <div class="pp-grid" data-featured-mount data-featured-type="all" data-featured-limit="3" style="margin-top:12px"></div>
     </section>
+
   </main>
   
   <main class="pp-container pp-main">
@@ -51,5 +45,6 @@
   <script src="assets/js/menu-toggle.js"></script>
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/katha-page.js"></script>
+  <script src="assets/js/featured.js"></script>
 </body>
 </html>

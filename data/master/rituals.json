@@ -32,6 +32,12 @@
       "whatsappText": {
         "en": "I want to book Rudrabhishek in Kashi.",
         "hi": "मुझे काशी में रुद्राभिषेक बुक करना है।"
+      },
+      "featured": true,
+      "featuredRank": 1,
+      "featuredNote": {
+        "en": "Most requested.",
+        "hi": "सबसे अधिक मांग।"
       }
     },
     {
