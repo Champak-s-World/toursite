@@ -259,7 +259,7 @@
       lines.push(getLang()==="hi" ? "📝 नोट्स:" : "📝 Notes:");
       lines.push(state.notes.trim());
     }
-    return lines.join("\n");
+    return lines.join("  ");
   }
 
   if(btnWA){
