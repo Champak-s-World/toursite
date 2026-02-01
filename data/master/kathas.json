@@ -1,0 +1,46 @@
+{
+  "kathas": [
+    {
+      "id": "ramkatha",
+      "title": {
+        "en": "Shri Ramkatha",
+        "hi": "श्री रामकथा"
+      },
+      "kathaType": "ram",
+      "duration": "7 Days",
+      "specialNotes": {
+        "en": "Renowned saints/scholars available.",
+        "hi": "देश के सुप्रसिद्ध संत/विद्वान उपलब्ध।"
+      },
+      "tags": [
+        "ram",
+        "katha"
+      ],
+      "ctaText": {
+        "en": "Arrange Ramkatha",
+        "hi": "रामकथा की व्यवस्था करें"
+      },
+      "whatsappText": {
+        "en": "I want details for arranging Shri Ramkatha.",
+        "hi": "मुझे श्री रामकथा की व्यवस्था की जानकारी चाहिए।"
+      }
+    },
+    {
+      "id": "shivmahapuran",
+      "title": {
+        "en": "Shiv Mahapuran Katha",
+        "hi": "श्री शिवमहापुराण कथा"
+      },
+      "kathaType": "shiv",
+      "duration": "7 Days",
+      "tags": [
+        "shiv",
+        "katha"
+      ],
+      "ctaText": {
+        "en": "Arrange Shiv Mahapuran Katha",
+        "hi": "शिवमहापुराण कथा की व्यवस्था करें"
+      }
+    }
+  ]
+}

@@ -60,3 +60,9 @@ Run locally with VS Code Live Server (recommended).
 - Auto-save: localStorage key `pp_tour_maker_v1`
 - Export: Download JSON
 - Share: WhatsApp message with Google Maps links
+
+
+## Master Data (NEW)
+- Files: `data/master/tours.json`, `rituals.json`, `kathas.json`, `occasions.json`
+- Preview page: `master-data.html`
+- Guide: `MASTER_DATA_GUIDE.md`

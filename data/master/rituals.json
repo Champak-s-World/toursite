@@ -1,0 +1,60 @@
+{
+  "rituals": [
+    {
+      "id": "rudrabhishek",
+      "title": {
+        "en": "Rudrabhishek",
+        "hi": "रुद्राभिषेक"
+      },
+      "ritualType": "abhishek",
+      "purpose": {
+        "en": "Peace, prosperity, Shiva blessings.",
+        "hi": "शांति, समृद्धि एवं शिव कृपा।"
+      },
+      "benefits": {
+        "en": "Auspicious for health and spiritual progress.",
+        "hi": "स्वास्थ्य एवं आध्यात्मिक उन्नति हेतु शुभ।"
+      },
+      "locationOptions": [
+        "Kashi",
+        "Ujjain"
+      ],
+      "duration": "2–3 hours",
+      "tags": [
+        "shiv",
+        "festival",
+        "ritual"
+      ],
+      "ctaText": {
+        "en": "Book Rudrabhishek",
+        "hi": "रुद्राभिषेक बुक करें"
+      },
+      "whatsappText": {
+        "en": "I want to book Rudrabhishek in Kashi.",
+        "hi": "मुझे काशी में रुद्राभिषेक बुक करना है।"
+      }
+    },
+    {
+      "id": "mahamrityunjay_jap",
+      "title": {
+        "en": "Mahamrityunjay Jap",
+        "hi": "महामृत्युंजय जाप"
+      },
+      "ritualType": "jap",
+      "purpose": {
+        "en": "Longevity, health, protection.",
+        "hi": "दीर्घायु, स्वास्थ्य, संरक्षण।"
+      },
+      "duration": "1 Day / Multiple days",
+      "tags": [
+        "shiv",
+        "health",
+        "ritual"
+      ],
+      "ctaText": {
+        "en": "Enquire Mahamrityunjay Jap",
+        "hi": "महामृत्युंजय जाप पूछें"
+      }
+    }
+  ]
+}

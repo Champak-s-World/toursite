@@ -1,0 +1,45 @@
+{
+  "occasions": [
+    {
+      "date": "2026-02-14",
+      "title": {
+        "en": "Mahashivratri (Example)",
+        "hi": "महाशिवरात्रि (उदाहरण)"
+      },
+      "description": {
+        "en": "Special Rudrabhishek arrangements.",
+        "hi": "विशेष रुद्राभिषेक व्यवस्था।"
+      },
+      "tags": [
+        "shiv",
+        "festival"
+      ],
+      "relatedRituals": [
+        "rudrabhishek"
+      ],
+      "relatedTours": [
+        "kashi_darshan"
+      ],
+      "relatedKathas": [
+        "shivmahapuran"
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "title": {
+        "en": "Ram Navami (Example)",
+        "hi": "राम नवमी (उदाहरण)"
+      },
+      "tags": [
+        "ram",
+        "festival"
+      ],
+      "relatedTours": [
+        "ayodhya_darshan"
+      ],
+      "relatedKathas": [
+        "ramkatha"
+      ]
+    }
+  ]
+}

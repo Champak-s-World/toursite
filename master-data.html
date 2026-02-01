@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Master Data Preview | Spiritual Services</title>
+  <meta name="theme-color" content="#d97706" />
+  <link rel="stylesheet" href="assets/css/theme-saffron.css" />
+  <style>
+    .md-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+    @media (max-width:980px){.md-grid{grid-template-columns:1fr}}
+    .md-card{border:1px solid var(--border);border-radius:var(--r2);background:rgba(255,255,255,.86);box-shadow:var(--shadow);padding:14px}
+    html[data-theme="dark"] .md-card{background: rgba(17,24,39,.82);}
+    .md-h{margin:0 0 6px;font-weight:1100}
+    .md-muted{color:var(--muted);font-weight:850}
+    .md-list{margin-top:10px;display:grid;gap:10px}
+    .md-item{border:1px solid rgba(234,220,197,.55);border-radius:16px;padding:10px 12px;background:rgba(255,241,214,.35)}
+    html[data-theme="dark"] .md-item{background: rgba(245,158,11,.10);border-color: rgba(148,163,184,.22);}
+    .md-row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .md-title{font-weight:1000}
+    .md-tags{font-size:12px;color:var(--muted);font-weight:900}
+    .md-note{border-left:6px solid var(--brand);background:rgba(255,241,214,.55);border-radius:16px;padding:10px 12px;margin-top:10px;font-weight:900}
+    .md-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  </style>
+</head>
+<body>
+  <div data-include="includes/header.html"></div>
+
+  <section class="pp-hero">
+    <div class="pp-container">
+      <div class="pp-hero-card">
+        <h1>Master Data Preview</h1>
+        <p class="pp-muted">Edit JSON files in <code>data/master/</code> and refresh this page to see updates.</p>
+        <div class="md-actions">
+          <a class="pp-btn pp-btn-outline" href="experiences.html">Open Experiences</a>
+          <a class="pp-btn pp-btn-outline" href="tour-maker.html">Open Tour Maker</a>
+          <a class="pp-btn pp-btn-outline" href="calendar.html">Open Calendar</a>
+        </div>
+        <div class="md-note">Files: <b>tours.json</b>, <b>rituals.json</b>, <b>kathas.json</b>, <b>occasions.json</b></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="pp-container pp-main">
+    <div class="md-grid">
+      <section class="md-card"><h2 class="md-h">Tours</h2><div class="md-muted">data/master/tours.json</div><div class="md-list" id="listTours"></div></section>
+      <section class="md-card"><h2 class="md-h">Rituals</h2><div class="md-muted">data/master/rituals.json</div><div class="md-list" id="listRituals"></div></section>
+      <section class="md-card"><h2 class="md-h">Kathas</h2><div class="md-muted">data/master/kathas.json</div><div class="md-list" id="listKathas"></div></section>
+      <section class="md-card"><h2 class="md-h">Occasions</h2><div class="md-muted">data/master/occasions.json</div><div class="md-list" id="listOccasions"></div></section>
+    </div>
+  </main>
+
+  <div data-include="includes/footer.html"></div>
+
+  <script src="assets/js/include-loader.js"></script>
+  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="data/site.config.js"></script>
+  <script src="assets/js/contact-utils.js"></script>
+  <script src="assets/js/external-scripts.js"></script>
+  <script src="assets/js/menu-toggle.js"></script>
+
+  <script>
+  (function(){
+    function getLang(){ return (window.PP_LANG && window.PP_LANG.getLang) ? window.PP_LANG.getLang() : "en"; }
+    function t(obj){ const L=getLang(); return obj ? (obj[L]||obj.en||"") : ""; }
+    async function load(url){ const r=await fetch(url,{cache:"no-store"}); return r.json(); }
+    function render(listEl, items, type){
+      listEl.innerHTML="";
+      (items||[]).forEach(it=>{
+        const div=document.createElement("div"); div.className="md-item";
+        const row=document.createElement("div"); row.className="md-row";
+        const title=document.createElement("div"); title.className="md-title";
+        title.textContent = (type==="occasion") ? (it.date+" — "+t(it.title)) : t(it.title);
+        const meta=document.createElement("div"); meta.className="md-tags";
+        meta.textContent = (it.duration||it.ritualType||it.kathaType||"").toString();
+        row.appendChild(title); row.appendChild(meta); div.appendChild(row);
+        const tags=document.createElement("div"); tags.className="md-tags";
+        tags.textContent = "tags: " + (it.tags||[]).join(", ");
+        div.appendChild(tags);
+        listEl.appendChild(div);
+      });
+      if(!items || !items.length){
+        const empty=document.createElement("div"); empty.className="md-tags"; empty.textContent="(No data yet)";
+        listEl.appendChild(empty);
+      }
+    }
+    Promise.all([
+      load("data/master/tours.json"),
+      load("data/master/rituals.json"),
+      load("data/master/kathas.json"),
+      load("data/master/occasions.json")
+    ]).then(([a,b,c,d])=>{
+      render(document.getElementById("listTours"), a.tours, "tour");
+      render(document.getElementById("listRituals"), b.rituals, "ritual");
+      render(document.getElementById("listKathas"), c.kathas, "katha");
+      render(document.getElementById("listOccasions"), d.occasions, "occasion");
+    }).catch(console.error);
+
+    window.addEventListener("pp:langchange", ()=>location.reload());
+  })();
+  </script>
+</body>
+</html>

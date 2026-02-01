@@ -5,8 +5,8 @@
 
 window.PP_CONFIG = {
   contact: {
-    phoneE164: "+919335874326",     // TODO: replace (WhatsApp + Call)
-    email: "champaksworld@gmail.com",      // TODO: replace
+    phoneE164: "+919999999999",     // TODO: replace (WhatsApp + Call)
+    email: "info@example.com",      // TODO: replace
 
     whatsappText: {
       en: "Namaste! I want to know about your spiritual services.",
