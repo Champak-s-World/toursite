@@ -116,14 +116,14 @@
         {
           "id": "ram-mandir",
           "name": {
-            "en": "Shri Ram Janmabhoomi Mandir",
+            "en": "Places Janmabhoomi Mandir",
             "hi": "श्री राम जन्मभूमि मंदिर"
           },
           "lat": 26.7956,
           "lng": 82.1945,
           "category": "temple",
           "images": [
-            "https://picsum.photos/seed/rammandir1/900/600",
+            "assets/images/varanasi/1.jpg",
             "https://picsum.photos/seed/rammandir2/900/600",
             "https://picsum.photos/seed/rammandir3/900/600"
           ],
