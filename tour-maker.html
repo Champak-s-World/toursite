@@ -17,62 +17,63 @@
     <div class="pp-container">
       <div class="pp-hero-card">
         <h1 data-i18n="tourMakerTitle">Tour Maker</h1>
-        <p class="pp-muted" data-i18n="tourMakerSubtitle">Search places, build an itinerary, save automatically, download, and send on WhatsApp.</p>
-        <div class="tm-badge" id="tmSavedBadge" data-i18n="tourMakerAutoSaved">Auto-saved to your device.</div>
+        <p class="pp-muted" data-i18n="tourMakerSubtitle">
+          Search locations, add to itinerary, autosave, download, and share on WhatsApp.
+        </p>
       </div>
     </div>
   </section>
 
-  <main class="pp-container pp-main">
-
-    <section class="pp-panel" style="margin-top:14px">
-      <h2 class="pp-h2" style="margin:0 0 6px">Featured</h2>
-      <div class="pp-muted">Auto from upcoming occasions (Calendar) with fallback to curated featured flags.</div>
-      <div class="pp-grid" data-featured-mount data-featured-mode="mixed" data-featured-limit="3" style="margin-top:12px"></div>
-    </section>
-
+  <main class="pp-container" style="padding-bottom:40px">
     <div class="tm-grid">
       <section class="tm-card">
         <div class="pp-label" data-i18n="tourMakerSearchLabel">Search locations</div>
         <div class="tm-searchrow">
           <input id="tmSearch" type="search" data-i18n-placeholder="tourMakerSearchPh" placeholder="Type: Kashi, Ayodhya, Prayagraj, Chitrakoot…" autocomplete="off" />
         </div>
+
+        <!-- ✅ NEW: search mode toggle -->
+        <div class="tm-toggle" role="group" aria-label="Search mode" style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+          <button id="tmModeStrict" class="pp-btn pp-btn--ghost" type="button" aria-pressed="true">
+            🔒 Verified (locations.json)
+          </button>
+          <button id="tmModeHybrid" class="pp-btn pp-btn--ghost" type="button" aria-pressed="false">
+            🌍 Everywhere (OSM fallback)
+          </button>
+        </div>
+        <div class="pp-muted" id="tmModeHint" style="margin-top:8px">
+          Verified mode searches only your curated master data (fast, accurate, always has lat/lng).
+        </div>
+
         <div class="tm-list" id="tmResults"></div>
+
         <p class="pp-muted" style="margin-top:10px">
-          Tip: You can search <b>India</b> and <b>outside India</b> locations. Results come from OpenStreetMap.
+          Tip: Choose a search mode: <b>Verified</b> uses locations.json only; <b>Everywhere</b> adds OpenStreetMap fallback.
         </p>
       </section>
 
-      <aside class="tm-card">
-        <div class="pp-label" data-i18n="tourMakerItinerary">Your itinerary</div>
-        <div class="tm-list" id="tmItinerary"></div>
+      <section class="tm-card">
+        <div class="pp-label" data-i18n="tourMakerPlanLabel">Your itinerary</div>
+        <div id="tmItinerary" class="tm-itinerary"></div>
 
-        <div style="margin-top:12px">
-          <div class="pp-label" data-i18n="tourMakerNotes">Notes (optional)</div>
-          <textarea class="tm-textarea" id="tmNotes" data-i18n-placeholder="tourMakerNotesPh" placeholder="E.g., dates, hotel, pickup point…"></textarea>
+        <div class="tm-actionsbar">
+          <button class="pp-btn" id="tmBtnSave" type="button" data-i18n="tourMakerSaveBtn">Save</button>
+          <button class="pp-btn pp-btn--ghost" id="tmBtnClear" type="button" data-i18n="tourMakerClearBtn">Clear</button>
+          <button class="pp-btn pp-btn--ghost" id="tmBtnDownload" type="button" data-i18n="tourMakerDownloadBtn">Download</button>
+          <a class="pp-btn" id="tmBtnWhatsApp" target="_blank" rel="noopener" data-i18n="tourMakerWhatsAppBtn">Send WhatsApp</a>
+          <a class="pp-btn pp-btn--ghost" href="route.html" data-i18n="routeMapBtn">Route Map</a>
         </div>
 
-        <div class="tm-stickybar">
-          <button class="pp-btn pp-btn-outline" id="tmClear" type="button" data-i18n="tourMakerClear">Clear</button>
-          <button class="pp-btn pp-btn-outline" id="tmDownload" type="button" data-i18n="tourMakerDownload">Download</button>
-          <a class="pp-btn pp-btn-outline" id="tmRouteMap" href="route.html">Route Map</a>
-          <button class="pp-btn" id="tmWhatsApp" type="button" data-i18n="tourMakerSendWA">Send on WhatsApp</button>
-        </div>
-      </aside>
+        <div class="pp-label" style="margin-top:16px" data-i18n="tourMakerNotesLabel">Notes (optional)</div>
+        <textarea id="tmNotes" class="tm-notes" rows="5" placeholder="e.g., start time, hotel pickup, special rituals…"></textarea>
+      </section>
     </div>
   </main>
 
   <div data-include="includes/footer.html"></div>
 
-  <script src="assets/js/include-loader.js"></script>
-  <script src="assets/js/lang.js"></script>
+  <script src="assets/js/includes.js"></script>
   <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="data/site.config.js"></script>
-  <script src="assets/js/contact-utils.js"></script>
-  <script src="assets/js/external-scripts.js"></script>
-  <script src="assets/js/menu-toggle.js"></script>
   <script src="assets/js/tour-maker.js"></script>
-  <script src="assets/js/featured.js"></script>
 </body>
 </html>
