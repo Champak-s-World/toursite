@@ -1,165 +1,428 @@
 {
-  "version": "1.0",
-  "source": "demo",
+  "version": "1.2",
+  "source": "demo-comprehensive",
+  "updatedAt": "2026-02-03",
   "cities": [
     {
       "id": "ayodhya",
-      "name": {
-        "en": "Ayodhya",
-        "hi": "अयोध्या"
-      },
+      "name": { "en": "Ayodhya", "hi": "अयोध्या" },
       "lat": 26.7922,
       "lng": 82.1998,
       "priority": 1,
       "images": [
         "assets/images/ayodhya/city-1.jpg",
-        "assets/images/ayodhya/city-2.jpg"
+        "assets/images/ayodhya/city-2.jpg",
+        "assets/images/ayodhya/city-3.jpg"
       ],
+      "tags": ["ram", "tirth", "temples", "ghats", "ayodhya"],
       "places": [
         {
           "id": "ramjanmabhoomi",
-          "name": {
-            "en": "Locations Janmabhoomi",
-            "hi": "राम जन्मभूमि"
-          },
+          "name": { "en": "Shri Ram Janmabhoomi Mandir", "hi": "श्री राम जन्मभूमि मंदिर" },
           "lat": 26.7956,
           "lng": 82.1945,
           "category": "temple",
-          "tags": ["ram", "temple", "ayodhya"],
+          "tags": ["ram", "temple", "darshan", "ayodhya"],
           "images": [
             "assets/images/ayodhya/ramjanmabhoomi-1.jpg",
             "assets/images/ayodhya/ramjanmabhoomi-2.jpg"
           ],
-          "featured": true
+          "videos": [],
+          "featured": true,
+          "featuredRank": 1
         },
         {
           "id": "hanuman-garhi",
-          "name": {
-            "en": "Hanuman Garhi",
-            "hi": "हनुमान गढ़ी"
-          },
+          "name": { "en": "Hanuman Garhi", "hi": "हनुमान गढ़ी" },
           "lat": 26.7932,
           "lng": 82.2005,
           "category": "temple",
-          "tags": ["hanuman", "temple"],
-          "images": [
-            "assets/images/ayodhya/hanuman-garhi-1.jpg"
-          ]
+          "tags": ["hanuman", "temple", "ayodhya"],
+          "images": ["assets/images/ayodhya/hanuman-garhi-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "kanak-bhawan",
+          "name": { "en": "Kanak Bhawan", "hi": "कनक भवन" },
+          "lat": 26.7950,
+          "lng": 82.2000,
+          "category": "temple",
+          "tags": ["ram", "sita", "temple"],
+          "images": ["assets/images/ayodhya/kanak-bhawan-1.jpg"],
+          "videos": []
         },
         {
           "id": "saryu-ghat",
-          "name": {
-            "en": "Saryu Ghat",
-            "hi": "सरयू घाट"
-          },
+          "name": { "en": "Saryu Ghat", "hi": "सरयू घाट" },
           "lat": 26.7949,
           "lng": 82.2020,
           "category": "ghat",
-          "tags": ["ghat", "aarti"],
-          "images": [
-            "assets/images/ayodhya/saryu-ghat-1.jpg"
-          ]
+          "tags": ["ghat", "aarti", "saryu"],
+          "images": ["assets/images/ayodhya/saryu-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "guptar-ghat",
+          "name": { "en": "Guptar Ghat", "hi": "गुप्तार घाट" },
+          "lat": 26.6000,
+          "lng": 82.2000,
+          "category": "ghat",
+          "tags": ["ghat", "saryu", "spiritual"],
+          "images": ["assets/images/ayodhya/guptar-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "nageshwarnath-temple",
+          "name": { "en": "Nageshwarnath Temple", "hi": "नागेश्वरनाथ मंदिर" },
+          "lat": 26.7905,
+          "lng": 82.2065,
+          "category": "temple",
+          "tags": ["shiv", "temple"],
+          "images": ["assets/images/ayodhya/nageshwarnath-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "dashrath-mahal",
+          "name": { "en": "Dashrath Mahal", "hi": "दशरथ महल" },
+          "lat": 26.7960,
+          "lng": 82.2015,
+          "category": "heritage",
+          "tags": ["ram", "heritage", "palace"],
+          "images": ["assets/images/ayodhya/dashrath-mahal-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "bharat-kund",
+          "name": { "en": "Bharat Kund", "hi": "भरत कुंड" },
+          "lat": 26.6840,
+          "lng": 82.1510,
+          "category": "kund",
+          "tags": ["bharat", "kund", "tirth"],
+          "images": ["assets/images/ayodhya/bharat-kund-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "tulsi-smarak-bhawan",
+          "name": { "en": "Tulsi Smarak Bhawan", "hi": "तुलसी स्मारक भवन" },
+          "lat": 26.7959,
+          "lng": 82.2042,
+          "category": "cultural",
+          "tags": ["tulsidas", "cultural"],
+          "images": ["assets/images/ayodhya/tulsi-smarak-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "valmiki-ramayan-bhawan",
+          "name": { "en": "Valmiki Ramayan Bhawan", "hi": "वाल्मीकि रामायण भवन" },
+          "lat": 26.7939,
+          "lng": 82.2031,
+          "category": "cultural",
+          "tags": ["valmiki", "ramayan"],
+          "images": ["assets/images/ayodhya/valmiki-bhawan-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "ram-ki-pairi",
+          "name": { "en": "Ram Ki Paidi", "hi": "राम की पैड़ी" },
+          "lat": 26.7944,
+          "lng": 82.2030,
+          "category": "ghat",
+          "tags": ["ghat", "saryu", "aarti"],
+          "images": ["assets/images/ayodhya/ram-ki-pairi-1.jpg"],
+          "videos": [],
+          "featured": true,
+          "featuredRank": 2
         }
       ]
     },
 
     {
       "id": "varanasi",
-      "name": {
-        "en": "Varanasi",
-        "hi": "काशी"
-      },
+      "name": { "en": "Varanasi", "hi": "काशी" },
       "lat": 25.3176,
       "lng": 82.9739,
       "priority": 2,
       "images": [
-        "assets/images/varanasi/city-1.jpg"
+        "assets/images/varanasi/city-1.jpg",
+        "assets/images/varanasi/city-2.jpg",
+        "assets/images/varanasi/city-3.jpg"
       ],
+      "tags": ["kashi", "shiv", "ganga", "ghats", "temples", "varanasi"],
       "places": [
         {
           "id": "kashi-vishwanath",
-          "name": {
-            "en": "Kashi Vishwanath Temple",
-            "hi": "काशी विश्वनाथ मंदिर"
-          },
+          "name": { "en": "Shri Kashi Vishwanath Temple", "hi": "श्री काशी विश्वनाथ मंदिर" },
           "lat": 25.3109,
           "lng": 83.0107,
           "category": "temple",
-          "tags": ["shiv", "jyotirlinga"],
+          "tags": ["shiv", "jyotirlinga", "darshan"],
           "images": [
-            "assets/images/varanasi/kashi-vishwanath-1.jpg"
+            "assets/images/varanasi/kashi-vishwanath-1.jpg",
+            "assets/images/varanasi/kashi-vishwanath-2.jpg"
           ],
-          "featured": true
+          "videos": [],
+          "featured": true,
+          "featuredRank": 1
+        },
+        {
+          "id": "kal-bhairav",
+          "name": { "en": "Kal Bhairav Temple", "hi": "काल भैरव मंदिर" },
+          "lat": 25.3337,
+          "lng": 83.0082,
+          "category": "temple",
+          "tags": ["bhairav", "shiv", "temple"],
+          "images": ["assets/images/varanasi/kal-bhairav-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "sankat-mochan",
+          "name": { "en": "Sankat Mochan Hanuman Temple", "hi": "संकट मोचन मंदिर" },
+          "lat": 25.2857,
+          "lng": 82.9930,
+          "category": "temple",
+          "tags": ["hanuman", "temple"],
+          "images": ["assets/images/varanasi/sankat-mochan-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "durga-kund",
+          "name": { "en": "Durga Kund Mandir", "hi": "दुर्गा कुंड मंदिर" },
+          "lat": 25.2844,
+          "lng": 82.9974,
+          "category": "temple",
+          "tags": ["devi", "temple"],
+          "images": ["assets/images/varanasi/durga-kund-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "new-vishwanath-bhu",
+          "name": { "en": "Shri Vishwanath Temple (BHU)", "hi": "बि.एच.यू. विश्वनाथ मंदिर" },
+          "lat": 25.2666,
+          "lng": 82.9911,
+          "category": "temple",
+          "tags": ["shiv", "bhu", "temple"],
+          "images": ["assets/images/varanasi/bhu-temple-1.jpg"],
+          "videos": []
         },
         {
           "id": "dashashwamedh-ghat",
-          "name": {
-            "en": "Dashashwamedh Ghat",
-            "hi": "दशाश्वमेध घाट"
-          },
+          "name": { "en": "Dashashwamedh Ghat", "hi": "दशाश्वमेध घाट" },
           "lat": 25.3068,
           "lng": 83.0094,
           "category": "ghat",
-          "tags": ["ganga", "aarti"],
+          "tags": ["ganga", "aarti", "ghat"],
           "images": [
-            "assets/images/varanasi/dashashwamedh-ghat-1.jpg"
-          ]
+            "assets/images/varanasi/dashashwamedh-ghat-1.jpg",
+            "assets/images/varanasi/dashashwamedh-ghat-2.jpg"
+          ],
+          "videos": [],
+          "featured": true,
+          "featuredRank": 2
+        },
+        {
+          "id": "assi-ghat",
+          "name": { "en": "Assi Ghat", "hi": "अस्सी घाट" },
+          "lat": 25.2883,
+          "lng": 83.0060,
+          "category": "ghat",
+          "tags": ["ganga", "ghat", "sunrise"],
+          "images": ["assets/images/varanasi/assi-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "manikarnika-ghat",
+          "name": { "en": "Manikarnika Ghat", "hi": "मणिकर्णिका घाट" },
+          "lat": 25.3103,
+          "lng": 83.0148,
+          "category": "ghat",
+          "tags": ["ghat", "moksha", "kashi"],
+          "images": ["assets/images/varanasi/manikarnika-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "harishchandra-ghat",
+          "name": { "en": "Harishchandra Ghat", "hi": "हरिश्चंद्र घाट" },
+          "lat": 25.3005,
+          "lng": 83.0066,
+          "category": "ghat",
+          "tags": ["ghat", "kashi"],
+          "images": ["assets/images/varanasi/harishchandra-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "tulsi-ghat",
+          "name": { "en": "Tulsi Ghat", "hi": "तुलसी घाट" },
+          "lat": 25.2897,
+          "lng": 83.0042,
+          "category": "ghat",
+          "tags": ["ghat", "tulsidas"],
+          "images": ["assets/images/varanasi/tulsi-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "panchganga-ghat",
+          "name": { "en": "Panchganga Ghat", "hi": "पंचगंगा घाट" },
+          "lat": 25.3086,
+          "lng": 83.0180,
+          "category": "ghat",
+          "tags": ["ghat", "ganga"],
+          "images": ["assets/images/varanasi/panchganga-ghat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "ramnagar-fort",
+          "name": { "en": "Ramnagar Fort", "hi": "रामनगर किला" },
+          "lat": 25.2846,
+          "lng": 83.0190,
+          "category": "heritage",
+          "tags": ["fort", "heritage"],
+          "images": ["assets/images/varanasi/ramnagar-fort-1.jpg"],
+          "videos": []
         },
         {
           "id": "sarnath",
-          "name": {
-            "en": "Sarnath",
-            "hi": "सारनाथ"
-          },
+          "name": { "en": "Sarnath", "hi": "सारनाथ" },
           "lat": 25.3817,
           "lng": 83.0219,
           "category": "buddhist",
-          "tags": ["buddha", "heritage"],
+          "tags": ["buddha", "heritage", "stupa"],
           "images": [
-            "assets/images/varanasi/sarnath-1.jpg"
-          ]
+            "assets/images/varanasi/sarnath-1.jpg",
+            "assets/images/varanasi/sarnath-2.jpg"
+          ],
+          "videos": [],
+          "featured": true,
+          "featuredRank": 3
+        },
+        {
+          "id": "bhartendu-harishchandra-museum",
+          "name": { "en": "Bharat Kala Bhavan (BHU Museum)", "hi": "भारत कला भवन" },
+          "lat": 25.2645,
+          "lng": 82.9892,
+          "category": "museum",
+          "tags": ["museum", "bhu", "art"],
+          "images": ["assets/images/varanasi/bharat-kala-bhavan-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "chunar-fort",
+          "name": { "en": "Chunar Fort (near Varanasi)", "hi": "चुनार किला" },
+          "lat": 25.1276,
+          "lng": 82.8790,
+          "category": "heritage",
+          "tags": ["fort", "heritage"],
+          "images": ["assets/images/varanasi/chunar-fort-1.jpg"],
+          "videos": []
         }
       ]
     },
 
     {
       "id": "prayagraj",
-      "name": {
-        "en": "Prayagraj",
-        "hi": "प्रयागराज"
-      },
+      "name": { "en": "Prayagraj", "hi": "प्रयागराज" },
       "lat": 25.4358,
       "lng": 81.8463,
       "priority": 3,
+      "images": [
+        "assets/images/prayagraj/city-1.jpg",
+        "assets/images/prayagraj/city-2.jpg"
+      ],
+      "tags": ["sangam", "kumbh", "prayagraj", "tirth"],
       "places": [
         {
           "id": "triveni-sangam",
-          "name": {
-            "en": "Triveni Sangam",
-            "hi": "त्रिवेणी संगम"
-          },
+          "name": { "en": "Triveni Sangam", "hi": "त्रिवेणी संगम" },
           "lat": 25.4309,
           "lng": 81.8253,
           "category": "sangam",
-          "tags": ["sangam", "kumbh"],
+          "tags": ["sangam", "kumbh", "snan"],
           "images": [
-            "assets/images/prayagraj/triveni-sangam-1.jpg"
+            "assets/images/prayagraj/triveni-sangam-1.jpg",
+            "assets/images/prayagraj/triveni-sangam-2.jpg"
           ],
-          "featured": true
+          "videos": [],
+          "featured": true,
+          "featuredRank": 1
         },
         {
           "id": "akshaya-vat",
-          "name": {
-            "en": "Akshaya Vat",
-            "hi": "अक्षय वट"
-          },
+          "name": { "en": "Akshaya Vat", "hi": "अक्षय वट" },
           "lat": 25.4315,
           "lng": 81.8297,
           "category": "sacred-tree",
-          "tags": ["akshaya", "vat"],
-          "images": [
-            "assets/images/prayagraj/akshaya-vat-1.jpg"
-          ]
+          "tags": ["akshaya", "vat", "tirth"],
+          "images": ["assets/images/prayagraj/akshaya-vat-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "allahabad-fort",
+          "name": { "en": "Allahabad Fort", "hi": "इलाहाबाद किला" },
+          "lat": 25.4319,
+          "lng": 81.8305,
+          "category": "heritage",
+          "tags": ["fort", "heritage"],
+          "images": ["assets/images/prayagraj/allahabad-fort-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "hanuman-mandir-sangam",
+          "name": { "en": "Lete Hanuman Ji Temple", "hi": "लेटे हनुमान जी मंदिर" },
+          "lat": 25.4311,
+          "lng": 81.8318,
+          "category": "temple",
+          "tags": ["hanuman", "temple"],
+          "images": ["assets/images/prayagraj/lete-hanuman-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "anand-bhawan",
+          "name": { "en": "Anand Bhawan", "hi": "आनंद भवन" },
+          "lat": 25.4593,
+          "lng": 81.8548,
+          "category": "museum",
+          "tags": ["museum", "heritage"],
+          "images": ["assets/images/prayagraj/anand-bhawan-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "khusro-bagh",
+          "name": { "en": "Khusro Bagh", "hi": "ख़ुसरो बाग़" },
+          "lat": 25.4382,
+          "lng": 81.8400,
+          "category": "heritage",
+          "tags": ["garden", "heritage"],
+          "images": ["assets/images/prayagraj/khusro-bagh-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "alopi-devi-mandir",
+          "name": { "en": "Alopi Devi Mandir", "hi": "अलोपी देवी मंदिर" },
+          "lat": 25.4602,
+          "lng": 81.8622,
+          "category": "temple",
+          "tags": ["devi", "temple"],
+          "images": ["assets/images/prayagraj/alopi-devi-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "bharadwaj-ashram",
+          "name": { "en": "Bharadwaj Ashram", "hi": "भारद्वाज आश्रम" },
+          "lat": 25.4527,
+          "lng": 81.8605,
+          "category": "ashram",
+          "tags": ["ashram", "tirth"],
+          "images": ["assets/images/prayagraj/bharadwaj-ashram-1.jpg"],
+          "videos": []
+        },
+        {
+          "id": "nag-vasuki-temple",
+          "name": { "en": "Nag Vasuki Temple", "hi": "नाग वासुकी मंदिर" },
+          "lat": 25.4629,
+          "lng": 81.8407,
+          "category": "temple",
+          "tags": ["nag", "temple"],
+          "images": ["assets/images/prayagraj/nag-vasuki-1.jpg"],
+          "videos": []
         }
       ]
     }
