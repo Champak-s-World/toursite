@@ -1,59 +1,165 @@
 {
-  "meta": {
-    "priorityRule": "higher = more important"
-  },
+  "version": "1.0",
+  "source": "demo",
   "cities": [
     {
-      "id": "varanasi",
-      "priority": 100,
-      "name": {
-        "en": "Varanasi",
-        "hi": "वाराणसी"
-      },
-      "lat": 25.3176,
-      "lng": 82.9739,
-      "places": [
-        {
-          "id": "kashi-vishwanath",
-          "priority": 1000,
-          "name": {
-            "en": "Kashi Vishwanath",
-            "hi": "काशी विश्वनाथ"
-          },
-          "lat": 25.3108,
-          "lng": 83.0106
-        },
-        {
-          "id": "dashashwamedh-ghat",
-          "priority": 900,
-          "name": {
-            "en": "Dashashwamedh Ghat",
-            "hi": "दशाश्वमेध घाट"
-          },
-          "lat": 25.3068,
-          "lng": 83.0104
-        }
-      ]
-    },
-    {
       "id": "ayodhya",
-      "priority": 90,
       "name": {
         "en": "Ayodhya",
         "hi": "अयोध्या"
       },
-      "lat": 26.799,
-      "lng": 82.204,
+      "lat": 26.7922,
+      "lng": 82.1998,
+      "priority": 1,
+      "images": [
+        "assets/images/ayodhya/city-1.jpg",
+        "assets/images/ayodhya/city-2.jpg"
+      ],
       "places": [
         {
-          "id": "ram-mandir",
-          "priority": 1000,
+          "id": "ramjanmabhoomi",
           "name": {
             "en": "Ram Janmabhoomi",
             "hi": "राम जन्मभूमि"
           },
           "lat": 26.7956,
-          "lng": 82.1945
+          "lng": 82.1945,
+          "category": "temple",
+          "tags": ["ram", "temple", "ayodhya"],
+          "images": [
+            "assets/images/ayodhya/ramjanmabhoomi-1.jpg",
+            "assets/images/ayodhya/ramjanmabhoomi-2.jpg"
+          ],
+          "featured": true
+        },
+        {
+          "id": "hanuman-garhi",
+          "name": {
+            "en": "Hanuman Garhi",
+            "hi": "हनुमान गढ़ी"
+          },
+          "lat": 26.7932,
+          "lng": 82.2005,
+          "category": "temple",
+          "tags": ["hanuman", "temple"],
+          "images": [
+            "assets/images/ayodhya/hanuman-garhi-1.jpg"
+          ]
+        },
+        {
+          "id": "saryu-ghat",
+          "name": {
+            "en": "Saryu Ghat",
+            "hi": "सरयू घाट"
+          },
+          "lat": 26.7949,
+          "lng": 82.2020,
+          "category": "ghat",
+          "tags": ["ghat", "aarti"],
+          "images": [
+            "assets/images/ayodhya/saryu-ghat-1.jpg"
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "varanasi",
+      "name": {
+        "en": "Varanasi",
+        "hi": "काशी"
+      },
+      "lat": 25.3176,
+      "lng": 82.9739,
+      "priority": 2,
+      "images": [
+        "assets/images/varanasi/city-1.jpg"
+      ],
+      "places": [
+        {
+          "id": "kashi-vishwanath",
+          "name": {
+            "en": "Kashi Vishwanath Temple",
+            "hi": "काशी विश्वनाथ मंदिर"
+          },
+          "lat": 25.3109,
+          "lng": 83.0107,
+          "category": "temple",
+          "tags": ["shiv", "jyotirlinga"],
+          "images": [
+            "assets/images/varanasi/kashi-vishwanath-1.jpg"
+          ],
+          "featured": true
+        },
+        {
+          "id": "dashashwamedh-ghat",
+          "name": {
+            "en": "Dashashwamedh Ghat",
+            "hi": "दशाश्वमेध घाट"
+          },
+          "lat": 25.3068,
+          "lng": 83.0094,
+          "category": "ghat",
+          "tags": ["ganga", "aarti"],
+          "images": [
+            "assets/images/varanasi/dashashwamedh-ghat-1.jpg"
+          ]
+        },
+        {
+          "id": "sarnath",
+          "name": {
+            "en": "Sarnath",
+            "hi": "सारनाथ"
+          },
+          "lat": 25.3817,
+          "lng": 83.0219,
+          "category": "buddhist",
+          "tags": ["buddha", "heritage"],
+          "images": [
+            "assets/images/varanasi/sarnath-1.jpg"
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "prayagraj",
+      "name": {
+        "en": "Prayagraj",
+        "hi": "प्रयागराज"
+      },
+      "lat": 25.4358,
+      "lng": 81.8463,
+      "priority": 3,
+      "places": [
+        {
+          "id": "triveni-sangam",
+          "name": {
+            "en": "Triveni Sangam",
+            "hi": "त्रिवेणी संगम"
+          },
+          "lat": 25.4309,
+          "lng": 81.8253,
+          "category": "sangam",
+          "tags": ["sangam", "kumbh"],
+          "images": [
+            "assets/images/prayagraj/triveni-sangam-1.jpg"
+          ],
+          "featured": true
+        },
+        {
+          "id": "akshaya-vat",
+          "name": {
+            "en": "Akshaya Vat",
+            "hi": "अक्षय वट"
+          },
+          "lat": 25.4315,
+          "lng": 81.8297,
+          "category": "sacred-tree",
+          "tags": ["akshaya", "vat"],
+          "images": [
+            "assets/images/prayagraj/akshaya-vat-1.jpg"
+          ]
         }
       ]
     }
