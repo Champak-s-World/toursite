@@ -54,3 +54,11 @@ html[data-theme="dark"] .tm-textarea{background: rgba(17,24,39,.85);}
   position: sticky; top: 84px;
   display:flex; gap:10px; flex-wrap:wrap; margin-top:12px
 }
+/* (your existing tour-maker.css stays the same) */
+
+/* Search mode toggle */
+.tm-toggle .pp-btn.is-active{
+  box-shadow: 0 0 0 2px rgba(217,119,6,.25) inset;
+  border-color: rgba(217,119,6,.5);
+  background: rgba(255,247,230,.9);
+}
